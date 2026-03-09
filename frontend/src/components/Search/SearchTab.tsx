@@ -91,6 +91,15 @@ export default function SearchTab() {
 
   const clearFilters = () => setFilters({});
 
+  // Auto-search when facet filters change (only if a search has already been performed)
+  useEffect(() => {
+    if (response) {
+      setPage(1);
+      doSearch(1);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filters]);
+
   // Get facets from the first available result set
   const activeFacets: Record<string, FacetValue[]> =
     response?.vision?.facets || response?.openai?.facets || {};

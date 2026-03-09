@@ -36,7 +36,7 @@ export default function FacetGroup({ label, values, selected, onChange }: Props)
 
       {open && (
         <div className="px-3 py-2 space-y-1 max-h-48 overflow-y-auto">
-          {values.map((fv) => (
+          {[...values].sort((a, b) => a.value.localeCompare(b.value)).map((fv) => (
             <label
               key={fv.value}
               className="flex items-center gap-2 text-sm cursor-pointer hover:bg-gray-50 rounded px-1 py-0.5"
