@@ -1,0 +1,77 @@
+{
+  "app": {
+    "title": "Búsqueda Visual con IA",
+    "upload": "Subir e Indexar",
+    "search": "Buscar",
+    "gallery": "Imágenes Indexadas"
+  },
+  "language": {
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "upload": {
+    "title": "Subir Imágenes",
+    "dropzone": "Arrastra y suelta imágenes aquí, o haz clic para explorar",
+    "dropzoneActive": "Suelta las imágenes aquí...",
+    "selectedFiles": "Archivos seleccionados",
+    "uploadBtn": "Subir e Indexar",
+    "uploading": "Subiendo...",
+    "success": "Se indexaron {{count}} imagen(es) correctamente",
+    "noFiles": "No hay archivos seleccionados",
+    "remove": "Eliminar"
+  },
+  "search": {
+    "title": "Buscar Imágenes",
+    "textPlaceholder": "Describe lo que estás buscando...",
+    "imageLabel": "O buscar por imagen",
+    "imagePlaceholder": "Suelta una imagen de referencia aquí, o haz clic para explorar",
+    "searchBtn": "Buscar",
+    "searching": "Buscando...",
+    "noResults": "No se encontraron resultados",
+    "results": "{{count}} resultados",
+    "relevance": "Relevancia",
+    "fileName": "Archivo",
+    "pageSize": "Por página",
+    "page": "Página",
+    "of": "de",
+    "strategy": "Estrategia",
+    "strategyVision": "AI Vision (multimodal)",
+    "strategyOpenai": "OpenAI Texto + Vision Imagen",
+    "strategyCompare": "Comparar ambas",
+    "visionResults": "Resultados AI Vision",
+    "openaiResults": "Resultados OpenAI + Vision",
+    "clearImage": "Quitar imagen",
+    "clearText": "Limpiar"
+  },
+  "facets": {
+    "title": "Filtros",
+    "tags": "Etiquetas",
+    "objects": "Objetos",
+    "contentType": "Tipo de archivo",
+    "clearAll": "Limpiar todos los filtros"
+  },
+  "modal": {
+    "close": "Cerrar",
+    "download": "Descargar",
+    "details": "Detalles"
+  },
+  "gallery": {
+    "title": "Imágenes Indexadas",
+    "empty": "Aún no hay imágenes indexadas",
+    "loading": "Cargando imágenes indexadas…",
+    "totalImages": "{{count}} imagen(es) indexada(s)",
+    "deleteOne": "Eliminar",
+    "deleteAll": "Eliminar Todas",
+    "confirmDeleteOne": "¿Eliminar esta imagen del índice?",
+    "confirmDeleteAll": "¿Eliminar TODAS las {{count}} imágenes del índice? Esta acción no se puede deshacer.",
+    "deleting": "Eliminando…",
+    "deleted": "{{count}} imagen(es) eliminada(s)",
+    "caption": "Descripción",
+    "tags": "Etiquetas",
+    "objects": "Objetos",
+    "description": "Descripción detallada",
+    "uploadDate": "Subida",
+    "dimensions": "Dimensiones",
+    "fileSize": "Tamaño"
+  }
+}

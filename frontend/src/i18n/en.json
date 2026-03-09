@@ -1,0 +1,77 @@
+{
+  "app": {
+    "title": "Visual AI Search",
+    "upload": "Upload & Index",
+    "search": "Search",
+    "gallery": "Indexed Images"
+  },
+  "language": {
+    "en": "English",
+    "es": "Spanish"
+  },
+  "upload": {
+    "title": "Upload Images",
+    "dropzone": "Drag & drop images here, or click to browse",
+    "dropzoneActive": "Drop images here...",
+    "selectedFiles": "Selected files",
+    "uploadBtn": "Upload & Index",
+    "uploading": "Uploading...",
+    "success": "Successfully indexed {{count}} image(s)",
+    "noFiles": "No files selected",
+    "remove": "Remove"
+  },
+  "search": {
+    "title": "Search Images",
+    "textPlaceholder": "Describe what you're looking for...",
+    "imageLabel": "Or search by image",
+    "imagePlaceholder": "Drop a reference image here, or click to browse",
+    "searchBtn": "Search",
+    "searching": "Searching...",
+    "noResults": "No results found",
+    "results": "{{count}} results",
+    "relevance": "Relevance",
+    "fileName": "File",
+    "pageSize": "Per page",
+    "page": "Page",
+    "of": "of",
+    "strategy": "Strategy",
+    "strategyVision": "AI Vision (multimodal)",
+    "strategyOpenai": "OpenAI Text + Vision Image",
+    "strategyCompare": "Compare both",
+    "visionResults": "AI Vision Results",
+    "openaiResults": "OpenAI + Vision Results",
+    "clearImage": "Clear image",
+    "clearText": "Clear"
+  },
+  "facets": {
+    "title": "Filters",
+    "tags": "Tags",
+    "objects": "Objects",
+    "contentType": "File Type",
+    "clearAll": "Clear all filters"
+  },
+  "modal": {
+    "close": "Close",
+    "download": "Download",
+    "details": "Details"
+  },
+  "gallery": {
+    "title": "Indexed Images",
+    "empty": "No images indexed yet",
+    "loading": "Loading indexed images…",
+    "totalImages": "{{count}} indexed image(s)",
+    "deleteOne": "Delete",
+    "deleteAll": "Delete All",
+    "confirmDeleteOne": "Delete this image from the index?",
+    "confirmDeleteAll": "Delete ALL {{count}} images from the index? This cannot be undone.",
+    "deleting": "Deleting…",
+    "deleted": "Deleted {{count}} image(s)",
+    "caption": "Caption",
+    "tags": "Tags",
+    "objects": "Objects",
+    "description": "Description",
+    "uploadDate": "Uploaded",
+    "dimensions": "Dimensions",
+    "fileSize": "Size"
+  }
+}
