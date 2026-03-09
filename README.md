@@ -4,6 +4,12 @@ Image search application with **dual vectorization** — compare **Azure AI Visi
 
 ---
 
+<p align="center">
+  <img src="search.png" alt="Search results demo" width="800">
+</p>
+
+---
+
 ## Features
 
 | Feature | Description |
