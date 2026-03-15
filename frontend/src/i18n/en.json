@@ -30,6 +30,7 @@
     "noResults": "No results found",
     "results": "{{count}} results",
     "relevance": "Relevance",
+    "relevanceThreshold": "Relevance threshold",
     "fileName": "File",
     "pageSize": "Per page",
     "page": "Page",

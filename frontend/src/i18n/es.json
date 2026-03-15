@@ -30,6 +30,7 @@
     "noResults": "No se encontraron resultados",
     "results": "{{count}} resultados",
     "relevance": "Relevancia",
+    "relevanceThreshold": "Umbral de relevancia",
     "fileName": "Archivo",
     "pageSize": "Por página",
     "page": "Página",

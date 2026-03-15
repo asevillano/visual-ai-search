@@ -26,3 +26,5 @@ containerapp-config.yaml
 
 # Other
 OLD/
+backend/logs/*
+.gitignore

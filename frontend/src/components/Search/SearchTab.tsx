@@ -31,6 +31,7 @@ export default function SearchTab() {
       })
       .catch(() => { /* keep default "all" */ });
   }, []);
+  const [relevanceThreshold, setRelevanceThreshold] = useState(50);
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState<PageSize>(20);
   const [loading, setLoading] = useState(false);
@@ -100,12 +101,23 @@ export default function SearchTab() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [filters]);
 
+  // --- Apply client-side relevance threshold filtering ---
+  const filterByRelevance = (items: import("../../types").SearchResultItem[]) =>
+    items.filter((r) => r.relevance >= relevanceThreshold);
+
+  const filteredVision = response?.vision
+    ? { ...response.vision, results: filterByRelevance(response.vision.results) }
+    : undefined;
+  const filteredOpenai = response?.openai
+    ? { ...response.openai, results: filterByRelevance(response.openai.results) }
+    : undefined;
+
   // Get facets from the first available result set
   const activeFacets: Record<string, FacetValue[]> =
     response?.vision?.facets || response?.openai?.facets || {};
 
-  const activeResult = response?.vision || response?.openai;
-  const totalCount = activeResult?.total_count || 0;
+  const activeResult = filteredVision || filteredOpenai;
+  const totalCount = activeResult?.results.length || 0;
 
   return (
     <div className="max-w-7xl mx-auto">
@@ -140,6 +152,23 @@ export default function SearchTab() {
               t("search.searchBtn")
             )}
           </button>
+
+          {/* Relevance threshold */}
+          <div className="flex items-center gap-2">
+            <label htmlFor="relevance-threshold" className="text-sm font-medium text-gray-600 whitespace-nowrap">
+              {t("search.relevanceThreshold")}
+            </label>
+            <input
+              id="relevance-threshold"
+              type="number"
+              min={0}
+              max={100}
+              value={relevanceThreshold}
+              onChange={(e) => setRelevanceThreshold(Math.max(0, Math.min(100, Number(e.target.value) || 0)))}
+              className="w-20 py-2 px-2.5 border border-gray-300 rounded-lg text-sm text-center focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none"
+            />
+            <span className="text-sm text-gray-500">%</span>
+          </div>
         </div>
       </div>
 
@@ -165,8 +194,8 @@ export default function SearchTab() {
 
           {/* Main content */}
           <div className="flex-1 min-w-0">
-            {response.mode === "compare" && response.vision && response.openai ? (
-              <CompareView vision={response.vision} openai={response.openai} />
+            {response.mode === "compare" && filteredVision && filteredOpenai ? (
+              <CompareView vision={filteredVision} openai={filteredOpenai} />
             ) : activeResult ? (
               <>
                 <p className="text-sm text-gray-500 mb-4">
