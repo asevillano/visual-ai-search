@@ -142,11 +142,23 @@ flowchart LR
 
 | | Strategy A — AI Vision Multimodal (1024-d) | Strategy B — OpenAI Text Semantic (3072-d) |
 |---|---|---|
-| **What is embedded** | Raw image pixels | GPT-4.1 detailed text description |
+| **What is embedded at indexing** | Raw image pixels | GPT-4.1 detailed text description |
 | **Embedding model** | Azure AI Vision `vectorizeImage` | `text-embedding-3-large` |
 | **Encodes** | Visual features (colors, shapes, layout, objects) | Semantic meaning of the *description* (concepts, relationships, context) |
 | **Customizable** | No — the vision model is a black box | Yes — edit `IMAGE_ANALYSIS_PROMPT` to focus on your domain (damage detection, retail products, medical imaging, etc.) |
 | **Best for** | "Find images that *look like* this" | "Find images that *mean* something similar to this concept" |
+
+### How Each Query Type Works Per Strategy
+
+Both strategies support **text search**, **image search**, and **text + image hybrid search**. The difference is **which vector field** and **which embedding model** is used:
+
+| Query type | Strategy A (AI Vision) | Strategy B (OpenAI) |
+|---|---|---|
+| **Text only** | AI Vision `vectorizeText` → 1024-d → search `imageVector` | OpenAI `text-embedding-3-large` → 3072-d → search `textVector` |
+| **Image only** | AI Vision `vectorizeImage` → 1024-d → search `imageVector` | AI Vision `vectorizeImage` → 1024-d → search `imageVector` **(same!)** |
+| **Text + Image** | Both vectors → search `imageVector` (same field) | Text → `textVector` (3072-d) + Image → `imageVector` (1024-d) |
+
+> **Key point:** When searching **by image**, both strategies do exactly the same thing — there is no OpenAI image embedding model, so both use AI Vision to convert the query image into a 1024-d vector and search against `imageVector`. The strategies only diverge for **text queries**.
 
 ---
 
@@ -154,13 +166,13 @@ flowchart LR
 
 ### Strategy A — AI Vision Multimodal
 
-Uses the **same** embedding model for both text and image queries, operating in a shared 1024-d vector space:
+Uses the **same** embedding model for both text and image queries, operating in a shared 1024-d multimodal vector space:
 
 ```mermaid
 flowchart LR
     subgraph Input
-        TQ["Text query"]
-        IQ["Image query"]
+        TQ["🔤 Text query"]
+        IQ["📷 Image query"]
     end
 
     TQ --> VT["AI Vision\nvectorizeText\n→ 1024-d"]
@@ -175,34 +187,35 @@ flowchart LR
     BM --> RRF
 
     RRF --> SR["Semantic Ranker\n(re-ranks top 50)"]
-    SR --> RES["Ranked Results\n0–100% relevance"]
+    SR --> RES["🏆 Ranked Results\n0–100% relevance"]
 ```
 
 **How it works:**
 1. **Text query** → AI Vision `vectorizeText` → 1024-d vector → cosine search on `imageVector`.
 2. **Image query** → AI Vision `vectorizeImage` → 1024-d vector → cosine search on `imageVector`.
-3. The text query *also* runs as a **BM25 full-text search** against `description`, `caption`, and `tags`.
-4. **RRF** (Reciprocal Rank Fusion) merges the vector and BM25 result lists.
-5. **Semantic Ranker** (when text is present) re-ranks the top 50 results using a language model that evaluates whether the document's `description`, `caption`, and `tags` genuinely match the query.
+3. When both are present, **two vector queries** hit the same `imageVector` field simultaneously.
+4. The text query *also* runs as a **BM25 full-text search** against `description`, `caption`, and `tags`.
+5. **RRF** (Reciprocal Rank Fusion) merges all result lists into a single ranking.
+6. **Semantic Ranker** (when text is present) re-ranks the top 50 results using a language model.
 
-**Key insight:** Because AI Vision encodes images and text into the **same multimodal vector space**, a text query like `"red sports car"` can find images of red sports cars *even if the GPT description never mentions those exact words*.
+**Key insight:** Because AI Vision encodes images and text into the **same multimodal vector space**, a text query like `"red sports car"` can find images of red sports cars *even if the GPT description never mentions those exact words*. The match happens at the visual level, not at the text level.
 
 ### Strategy B — OpenAI Text + Vision Image
 
-Uses a **higher-dimensional** text embedding (3072-d) for text queries, falling back to AI Vision for image queries:
+Uses a **higher-dimensional** text embedding (3072-d) for text queries, and AI Vision (1024-d) for image queries — searching **different vector fields** depending on the query type:
 
 ```mermaid
 flowchart LR
     subgraph Input
-        TQ["Text query"]
-        IQ["Image query"]
+        TQ["🔤 Text query"]
+        IQ["📷 Image query"]
     end
 
     TQ --> OE["OpenAI\ntext-embedding-3-large\n→ 3072-d"]
     IQ --> VI["AI Vision\nvectorizeImage\n→ 1024-d"]
 
-    OE --> VS1["Vector Search\non textVector\n(cosine similarity)"]
-    VI --> VS2["Vector Search\non imageVector\n(cosine similarity)"]
+    OE --> VS1["Vector Search\non textVector ①\n(cosine similarity)"]
+    VI --> VS2["Vector Search\non imageVector ②\n(cosine similarity)"]
 
     TQ --> BM["BM25 Full-Text\non description,\ncaption, tags"]
 
@@ -211,15 +224,25 @@ flowchart LR
     BM --> RRF
 
     RRF --> SR["Semantic Ranker\n(re-ranks top 50)"]
-    SR --> RES["Ranked Results\n0–100% relevance"]
+    SR --> RES["🏆 Ranked Results\n0–100% relevance"]
 ```
 
 **How it works:**
-1. **Text query** → OpenAI `text-embedding-3-large` → 3072-d vector → cosine search on `textVector`.
-2. **Image query** → AI Vision `vectorizeImage` → 1024-d vector → cosine search on `imageVector` (same as Strategy A — there is no OpenAI image embedding).
-3. BM25 full-text + RRF + Semantic Ranker work exactly the same as Strategy A.
+1. **Text query** → OpenAI `text-embedding-3-large` → 3072-d vector → cosine search on **`textVector`** ①.
+2. **Image query** → AI Vision `vectorizeImage` → 1024-d vector → cosine search on **`imageVector`** ② (identical to Strategy A — there is no OpenAI image embedding model).
+3. When both are present, the text vector hits `textVector` and the image vector hits `imageVector` — **two different fields** in the same index.
+4. BM25 full-text + RRF + Semantic Ranker work exactly the same as Strategy A.
 
-**Key insight:** Because `textVector` was built from a *GPT-4.1 description* and the query is embedded with the *same OpenAI model*, this strategy excels at **conceptual and semantic matching**. The GPT prompt is customizable, so the `details` field can emphasize domain-specific attributes (e.g., damage severity, brand identification) that drive better search relevance in your specific use case.
+**Key insight:** For **text queries**, this strategy leverages the fact that `textVector` was built from a *GPT-4.1 description* and the search query is embedded with the *same OpenAI model*. This means text↔text matching in a rich 3072-d semantic space, which excels at **conceptual and domain-specific matching**. For **image queries**, both strategies are equivalent since they both use AI Vision on `imageVector`.
+
+### When to Use Which?
+
+| Scenario | Recommended strategy | Why |
+|---|---|---|
+| "Find photos that look like this one" (image query) | Either — **identical** results | Both use AI Vision `vectorizeImage` → `imageVector` |
+| "Find a red car" (simple visual text query) | **A (Vision)** may be better | Matches visual features directly, no description needed |
+| "Find vehicles with front bumper damage" (domain text query) | **B (OpenAI)** is usually better | GPT-4.1 writes detailed descriptions; semantic text matching catches conceptual terms |
+| "Find something like this photo of a damaged door" (image + text) | **Compare both** and evaluate | Strategy A matches visuals; Strategy B adds semantic text understanding |
 
 ### Compare Mode
 
