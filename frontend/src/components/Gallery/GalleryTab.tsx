@@ -1,30 +1,33 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Trash2, RefreshCcw, ImageOff, ChevronLeft, ChevronRight } from "lucide-react";
+import { Trash2, RefreshCcw, ImageOff } from "lucide-react";
 import Spinner from "../common/Spinner";
 import ImageDetailModal from "../common/ImageDetailModal";
 import DocumentCard from "./DocumentCard";
+import Pagination from "../Search/Pagination";
 import { listDocuments, deleteDocument, deleteAllDocuments } from "../../services/api";
-import type { DocumentItem } from "../../types";
+import type { DocumentItem, PageSize } from "../../types";
 
-const PAGE_SIZE = 50;
+const DEFAULT_PAGE_SIZE: PageSize = 20;
 
 export default function GalleryTab() {
   const { t } = useTranslation();
   const [docs, setDocs] = useState<DocumentItem[]>([]);
   const [totalCount, setTotalCount] = useState(0);
   const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState<PageSize>(DEFAULT_PAGE_SIZE);
   const [loading, setLoading] = useState(true);
   const [deleting, setDeleting] = useState(false);
   const [selectedDoc, setSelectedDoc] = useState<DocumentItem | null>(null);
   const [toast, setToast] = useState("");
 
-  const totalPages = Math.max(1, Math.ceil(totalCount / PAGE_SIZE));
+  const pageSizeRef = useRef(pageSize);
+  pageSizeRef.current = pageSize;
 
   const fetchDocs = useCallback(async (p: number) => {
     setLoading(true);
     try {
-      const res = await listDocuments(p, PAGE_SIZE);
+      const res = await listDocuments(p, pageSizeRef.current);
       setDocs(res.documents);
       setTotalCount(res.total_count);
       setPage(p);
@@ -76,6 +79,12 @@ export default function GalleryTab() {
     } finally {
       setDeleting(false);
     }
+  };
+
+  const handlePageSizeChange = (newSize: PageSize) => {
+    setPageSize(newSize);
+    pageSizeRef.current = newSize;
+    fetchDocs(1);
   };
 
   return (
@@ -138,27 +147,13 @@ export default function GalleryTab() {
           </div>
 
           {/* Pagination */}
-          {totalPages > 1 && (
-            <div className="flex items-center justify-center gap-3 mt-8 pt-4 border-t border-gray-200">
-              <button
-                onClick={() => fetchDocs(page - 1)}
-                disabled={page <= 1}
-                className="p-1.5 border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed"
-              >
-                <ChevronLeft className="h-4 w-4" />
-              </button>
-              <span className="text-sm text-gray-700">
-                {t("search.page")} {page} {t("search.of")} {totalPages}
-              </span>
-              <button
-                onClick={() => fetchDocs(page + 1)}
-                disabled={page >= totalPages}
-                className="p-1.5 border border-gray-300 rounded hover:bg-gray-50 disabled:opacity-40 disabled:cursor-not-allowed"
-              >
-                <ChevronRight className="h-4 w-4" />
-              </button>
-            </div>
-          )}
+          <Pagination
+            page={page}
+            pageSize={pageSize}
+            totalCount={totalCount}
+            onPageChange={fetchDocs}
+            onPageSizeChange={handlePageSizeChange}
+          />
         </>
       )}
 

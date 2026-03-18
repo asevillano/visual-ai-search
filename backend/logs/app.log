@@ -7070,3 +7070,1203 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2026-03-15 09:39:03 | INFO    | app.search_router            |   Search complete — mode=single
 2026-03-15 09:39:03 | INFO    | app.search_router            |     OpenAI: 20 results (total=20)
 2026-03-15 09:39:03 | INFO    | app.main                     | ← POST /api/search — 200 (14408 ms)
+2026-03-15 09:43:55 | INFO    | app.main                     | → GET /api/config
+2026-03-15 09:43:55 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-15 09:43:55 | INFO    | app.main                     | → GET /api/config
+2026-03-15 09:43:55 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-15 10:10:27 | INFO    | app.main                     | → GET /api/config
+2026-03-15 10:10:27 | INFO    | app.main                     | ← GET /api/config — 200 (3 ms)
+2026-03-15 10:10:27 | INFO    | app.main                     | → GET /api/config
+2026-03-15 10:10:27 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-15 10:10:27 | INFO    | app.main                     | → GET /api/config
+2026-03-15 10:10:28 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-15 10:10:52 | INFO    | app.main                     | → POST /api/search
+2026-03-15 10:10:52 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-15 10:10:52 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-15 10:10:52 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-15 10:10:52 | INFO    | app.openai_embeddings        | embed_text OK (836 ms) — 3072-d vector
+2026-03-15 10:10:52 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-15 10:10:52 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=None
+2026-03-15 10:10:52 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-15 10:10:53 | INFO    | app.search                   |   _execute_search done (793 ms) — strategy=openai, total=20, returned=20
+2026-03-15 10:10:53 | INFO    | app.search                   |   Top result: id=30b18e069f1c4873b2b9b5dd65ae09cb, file=mercedes-benz-clase-e-2024-exterior-1-soymotor.jpg, relevance=64.4%
+2026-03-15 10:10:53 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-15 10:10:53 | INFO    | app.search_router            |     OpenAI: 20 results (total=20)
+2026-03-15 10:10:53 | INFO    | app.main                     | ← POST /api/search — 200 (1655 ms)
+2026-03-15 10:11:18 | INFO    | app.main                     | → POST /api/search
+2026-03-15 10:11:18 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters={"objects":["concrete floor"]}
+2026-03-15 10:11:18 | INFO    | app.search_router            |   Parsed filters: {'objects': ['concrete floor']}
+2026-03-15 10:11:18 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-15 10:11:18 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-15 10:11:18 | INFO    | app.openai_embeddings        | embed_text OK (667 ms) — 3072-d vector
+2026-03-15 10:11:18 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-15 10:11:18 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=(objects/any(t: t eq 'concrete floor'))
+2026-03-15 10:11:18 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-15 10:11:19 | INFO    | app.search                   |   _execute_search done (694 ms) — strategy=openai, total=2, returned=2
+2026-03-15 10:11:19 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=62.2%
+2026-03-15 10:11:19 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-15 10:11:19 | INFO    | app.search_router            |     OpenAI: 2 results (total=2)
+2026-03-15 10:11:19 | INFO    | app.main                     | ← POST /api/search — 200 (1384 ms)
+2026-03-15 10:11:21 | INFO    | app.main                     | → POST /api/search
+2026-03-15 10:11:21 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-15 10:11:21 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-15 10:11:21 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-15 10:11:22 | INFO    | app.openai_embeddings        | embed_text OK (305 ms) — 3072-d vector
+2026-03-15 10:11:22 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-15 10:11:22 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=None
+2026-03-15 10:11:22 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-15 10:11:22 | INFO    | app.search                   |   _execute_search done (420 ms) — strategy=openai, total=20, returned=20
+2026-03-15 10:11:22 | INFO    | app.search                   |   Top result: id=30b18e069f1c4873b2b9b5dd65ae09cb, file=mercedes-benz-clase-e-2024-exterior-1-soymotor.jpg, relevance=64.4%
+2026-03-15 10:11:22 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-15 10:11:22 | INFO    | app.search_router            |     OpenAI: 20 results (total=20)
+2026-03-15 10:11:22 | INFO    | app.main                     | ← POST /api/search — 200 (814 ms)
+2026-03-15 10:11:28 | INFO    | app.main                     | → POST /api/search
+2026-03-15 10:11:28 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters={"objects":["alloy wheels"]}
+2026-03-15 10:11:28 | INFO    | app.search_router            |   Parsed filters: {'objects': ['alloy wheels']}
+2026-03-15 10:11:28 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-15 10:11:28 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-15 10:11:30 | INFO    | app.main                     | → POST /api/search
+2026-03-15 10:11:30 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-15 10:11:30 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-15 10:11:30 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-15 10:11:31 | INFO    | app.openai_embeddings        | embed_text OK (548 ms) — 3072-d vector
+2026-03-15 10:11:31 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-15 10:11:31 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=None
+2026-03-15 10:11:31 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-15 10:11:31 | INFO    | app.search                   |   _execute_search done (418 ms) — strategy=openai, total=20, returned=20
+2026-03-15 10:11:31 | INFO    | app.search                   |   Top result: id=30b18e069f1c4873b2b9b5dd65ae09cb, file=mercedes-benz-clase-e-2024-exterior-1-soymotor.jpg, relevance=64.4%
+2026-03-15 10:11:31 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-15 10:11:31 | INFO    | app.search_router            |     OpenAI: 20 results (total=20)
+2026-03-15 10:11:31 | INFO    | app.main                     | ← POST /api/search — 200 (991 ms)
+2026-03-15 10:11:32 | INFO    | app.openai_embeddings        | embed_text OK (3934 ms) — 3072-d vector
+2026-03-15 10:11:32 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-15 10:11:32 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=(objects/any(t: t eq 'alloy wheels'))
+2026-03-15 10:11:32 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-15 10:11:32 | INFO    | app.main                     | → POST /api/search
+2026-03-15 10:11:32 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters={"objects":["arrows"]}
+2026-03-15 10:11:32 | INFO    | app.search_router            |   Parsed filters: {'objects': ['arrows']}
+2026-03-15 10:11:32 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-15 10:11:32 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-15 10:11:32 | INFO    | app.search                   |   _execute_search done (311 ms) — strategy=openai, total=2, returned=2
+2026-03-15 10:11:32 | INFO    | app.search                   |   Top result: id=02bfd127abff4e078577f192cf83a9bc, file=Mercedes-Clase-T-180d-2023-delantera.jpg, relevance=56.1%
+2026-03-15 10:11:32 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-15 10:11:32 | INFO    | app.search_router            |     OpenAI: 2 results (total=2)
+2026-03-15 10:11:32 | INFO    | app.main                     | ← POST /api/search — 200 (4268 ms)
+2026-03-15 10:11:32 | INFO    | app.openai_embeddings        | embed_text OK (225 ms) — 3072-d vector
+2026-03-15 10:11:32 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-15 10:11:32 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=(objects/any(t: t eq 'arrows'))
+2026-03-15 10:11:32 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-15 10:11:33 | INFO    | app.search                   |   _execute_search done (332 ms) — strategy=openai, total=2, returned=2
+2026-03-15 10:11:33 | INFO    | app.search                   |   Top result: id=ca0284e9c8594b63a9c3406b2207d86c, file=nick-fewings-C2zhShTnl5I-unsplash.jpg, relevance=30.7%
+2026-03-15 10:11:33 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-15 10:11:33 | INFO    | app.search_router            |     OpenAI: 2 results (total=2)
+2026-03-15 10:11:33 | INFO    | app.main                     | ← POST /api/search — 200 (583 ms)
+2026-03-15 10:11:34 | INFO    | app.main                     | → POST /api/search
+2026-03-15 10:11:34 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-15 10:11:34 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-15 10:11:34 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-15 10:11:34 | INFO    | app.openai_embeddings        | embed_text OK (228 ms) — 3072-d vector
+2026-03-15 10:11:34 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-15 10:11:34 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=None
+2026-03-15 10:11:34 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-15 10:11:35 | INFO    | app.search                   |   _execute_search done (321 ms) — strategy=openai, total=20, returned=20
+2026-03-15 10:11:35 | INFO    | app.search                   |   Top result: id=30b18e069f1c4873b2b9b5dd65ae09cb, file=mercedes-benz-clase-e-2024-exterior-1-soymotor.jpg, relevance=64.4%
+2026-03-15 10:11:35 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-15 10:11:35 | INFO    | app.search_router            |     OpenAI: 20 results (total=20)
+2026-03-15 10:11:35 | INFO    | app.main                     | ← POST /api/search — 200 (568 ms)
+2026-03-15 10:15:48 | INFO    | app.main                     | → POST /api/search
+2026-03-15 10:15:48 | INFO    | app.search_router            | Search request — text='sign', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-15 10:15:48 | INFO    | app.search                   | execute_search — strategy=openai, text='sign', has_image=False
+2026-03-15 10:15:48 | INFO    | app.openai_embeddings        | embed_text — 'sign'
+2026-03-15 10:15:49 | INFO    | app.openai_embeddings        | embed_text OK (641 ms) — 3072-d vector
+2026-03-15 10:15:49 | INFO    | app.search                   | _execute_search — strategy=openai, text='sign', has_image=False, page=1/20
+2026-03-15 10:15:49 | INFO    | app.search                   |   vector_queries=1, search_text='sign', filter=None
+2026-03-15 10:15:49 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-15 10:15:49 | INFO    | app.search                   |   _execute_search done (781 ms) — strategy=openai, total=20, returned=20
+2026-03-15 10:15:49 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=62.4%
+2026-03-15 10:15:49 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-15 10:15:49 | INFO    | app.search_router            |     OpenAI: 20 results (total=20)
+2026-03-15 10:15:49 | INFO    | app.main                     | ← POST /api/search — 200 (1443 ms)
+2026-03-15 13:06:18 | INFO    | app.main                     | → GET /api/config
+2026-03-15 13:06:18 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-15 13:06:18 | INFO    | app.main                     | → GET /api/config
+2026-03-15 13:06:18 | INFO    | app.main                     | ← GET /api/config — 200 (1 ms)
+2026-03-16 08:56:04 | INFO    | app.main                     | → GET /api/config
+2026-03-16 08:56:04 | INFO    | app.main                     | ← GET /api/config — 200 (59 ms)
+2026-03-16 08:56:04 | INFO    | app.main                     | → GET /api/config
+2026-03-16 08:56:04 | INFO    | app.main                     | ← GET /api/config — 200 (16 ms)
+2026-03-16 08:57:55 | INFO    | app.main                     | → GET /api/config
+2026-03-16 08:57:55 | INFO    | app.main                     | ← GET /api/config — 200 (6 ms)
+2026-03-16 08:57:55 | INFO    | app.main                     | → GET /api/config
+2026-03-16 08:57:55 | INFO    | app.main                     | ← GET /api/config — 200 (3 ms)
+2026-03-16 09:04:09 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:09 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:09 | INFO    | app.main                     | → GET /struts2-showcase/struts/utils.js
+2026-03-16 09:04:09 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:09 | INFO    | app.main                     | ← GET / — 404 (65 ms)
+2026-03-16 09:04:09 | INFO    | app.main                     | ← GET / — 404 (47 ms)
+2026-03-16 09:04:09 | INFO    | app.main                     | ← GET /struts2-showcase/struts/utils.js — 404 (49 ms)
+2026-03-16 09:04:09 | INFO    | app.main                     | ← GET / — 404 (56 ms)
+2026-03-16 09:04:09 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:09 | INFO    | app.main                     | ← GET / — 404 (5 ms)
+2026-03-16 09:04:10 | INFO    | app.main                     | → GET /js/
+2026-03-16 09:04:10 | INFO    | app.main                     | ← GET /js/ — 404 (2 ms)
+2026-03-16 09:04:11 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:11 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:11 | INFO    | app.main                     | ← GET /:undefined — 404 (7 ms)
+2026-03-16 09:04:11 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:11 | INFO    | app.main                     | ← GET /:undefined — 404 (14 ms)
+2026-03-16 09:04:11 | INFO    | app.main                     | ← GET /:undefined — 404 (24 ms)
+2026-03-16 09:04:11 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:11 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /struts2-showcase/struts/tooltip.gif
+2026-03-16 09:04:12 | INFO    | app.main                     | ← GET / — 404 (463 ms)
+2026-03-16 09:04:12 | INFO    | app.main                     | ← GET /:undefined — 404 (459 ms)
+2026-03-16 09:04:12 | INFO    | app.main                     | ← GET / — 404 (137 ms)
+2026-03-16 09:04:12 | INFO    | app.main                     | ← GET / — 404 (117 ms)
+2026-03-16 09:04:12 | INFO    | app.main                     | ← GET /:undefined — 404 (106 ms)
+2026-03-16 09:04:12 | INFO    | app.main                     | ← GET /:undefined — 404 (105 ms)
+2026-03-16 09:04:12 | INFO    | app.main                     | ← GET /:undefined — 404 (94 ms)
+2026-03-16 09:04:12 | INFO    | app.main                     | ← GET /struts2-showcase/struts/tooltip.gif — 404 (89 ms)
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /struts2-showcase/struts/inputtransfersselect.js
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /struts2-showcase/struts/optiontransferselect.js
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /struts2-showcase
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /index.action/struts/utils.js
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → POST /struts2-showcase/token/transfer4.action
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /struts2-showcase/struts/domTT.js
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /struts2-showcase/${jndi:dns://MDEDiscovery8f693a7b5fApacheStruts2-8000}
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → POST /struts2-showcase/token/transfer4.action
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → POST /analytics/telemetry/ph/api/hyper/send
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /struts2-showcase/struts/domtt.css
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:12 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:13 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (790 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /struts2-showcase/struts/inputtransfersselect.js — 404 (786 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (784 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (782 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (777 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (777 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (773 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (769 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (766 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /struts2-showcase/struts/optiontransferselect.js — 404 (765 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (763 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (766 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (765 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (767 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (773 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (773 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (770 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /struts2-showcase — 404 (765 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (763 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (763 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (765 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (769 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (771 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (774 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (780 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (792 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (805 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (815 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (818 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /index.action/struts/utils.js — 404 (819 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (834 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (842 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (847 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (852 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (855 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (857 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (858 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (854 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (857 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← POST /struts2-showcase/token/transfer4.action — 404 (860 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (862 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (864 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /struts2-showcase/struts/domTT.js — 404 (865 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (867 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (871 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (872 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (868 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (868 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (868 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (864 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /struts2-showcase/${jndi:dns://MDEDiscovery8f693a7b5fApacheStruts2-8000} — 404 (863 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (861 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (855 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (855 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← POST /struts2-showcase/token/transfer4.action — 404 (856 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (854 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (851 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (848 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (845 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (841 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (834 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (830 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (828 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (823 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (817 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← POST /analytics/telemetry/ph/api/hyper/send — 404 (811 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (808 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (801 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (798 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (795 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (792 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (784 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (779 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (772 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (760 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (754 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (750 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (745 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (745 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (745 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (747 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (748 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (746 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /struts2-showcase/struts/domtt.css — 404 (745 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (746 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (744 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (749 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (750 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (751 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (754 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (758 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (770 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (773 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (796 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (806 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (823 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (832 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (846 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (857 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (838 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET / — 404 (835 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (838 ms)
+2026-03-16 09:04:13 | INFO    | app.main                     | ← GET /:undefined — 404 (842 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET /:undefined — 404 (846 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET / — 404 (848 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET /:undefined — 404 (851 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET / — 404 (852 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET /:undefined — 404 (853 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET / — 404 (849 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET / — 404 (851 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET /:undefined — 404 (852 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET /:undefined — 404 (855 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET /:undefined — 404 (857 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET /:undefined — 404 (870 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET / — 404 (868 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET /:undefined — 404 (857 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | ← GET / — 404 (857 ms)
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /cgi-bin/
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /portal/info.jsp
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → POST /broker/xml
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → POST /broker/xml
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /webtools/control/main
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /JSPWiki/wiki/${jndi:dns://MDEDiscovery8f693a7b5fApacheJspWiki-8000}
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /cgi-bin/
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → POST /login
+2026-03-16 09:04:14 | INFO    | app.main                     | → POST /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → POST /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /login
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /index.html
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /api/
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /api/v2/${jndi:dns://MDEDiscovery8f693a7b5fSeenInTheWildGet-8000}
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:14 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:15 | INFO    | app.main                     | → GET /:undefined
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /cgi-bin/ — 404 (1465 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1467 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /:undefined — 404 (1485 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1487 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /:undefined — 404 (1496 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1489 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /:undefined — 404 (1473 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1484 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /portal/info.jsp — 404 (1477 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /:undefined — 404 (1489 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← POST /broker/xml — 404 (1481 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1469 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← POST /broker/xml — 404 (1451 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /:undefined — 404 (1452 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1444 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /webtools/control/main — 404 (1431 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /JSPWiki/wiki/${jndi:dns://MDEDiscovery8f693a7b5fApacheJspWiki-8000} — 404 (1424 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /:undefined — 404 (1419 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1418 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /cgi-bin/ — 404 (1419 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1412 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /:undefined — 404 (1409 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1390 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /:undefined — 404 (1366 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1348 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET /:undefined — 404 (1335 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← GET / — 404 (1326 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← POST /login — 404 (1303 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← POST /:undefined — 404 (1252 ms)
+2026-03-16 09:04:15 | INFO    | app.main                     | ← POST / — 404 (1240 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1234 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1230 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1222 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /login — 404 (1212 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1206 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /index.html — 404 (1193 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /api/ — 404 (1189 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1197 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1181 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1189 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1190 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /api/v2/${jndi:dns://MDEDiscovery8f693a7b5fSeenInTheWildGet-8000} — 404 (1183 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1193 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1203 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1212 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1219 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1237 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1245 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1245 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1248 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1248 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1247 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1241 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1239 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1235 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1221 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1192 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1185 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1175 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1170 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1166 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1161 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1161 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1160 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1159 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1163 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1163 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1158 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1158 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1159 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1159 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1155 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1158 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1152 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1146 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1148 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1148 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1148 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1144 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1140 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1138 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1133 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1133 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1130 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1128 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1125 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1117 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1108 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1105 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (1100 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET /:undefined — 404 (1094 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:16 | INFO    | app.main                     | → POST /
+2026-03-16 09:04:16 | INFO    | app.main                     | → POST /
+2026-03-16 09:04:16 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:16 | INFO    | app.main                     | → GET /
+2026-03-16 09:04:16 | INFO    | app.main                     | → POST /
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (31 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← POST / — 404 (34 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← POST / — 404 (36 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (35 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← GET / — 404 (38 ms)
+2026-03-16 09:04:16 | INFO    | app.main                     | ← POST / — 404 (40 ms)
+2026-03-16 09:47:32 | INFO    | app.main                     | → GET /api/documents
+2026-03-16 09:47:32 | INFO    | app.documents                | list_documents — page=1, page_size=50
+2026-03-16 09:47:34 | INFO    | app.documents                | list_documents OK — total=20, returned=20
+2026-03-16 09:47:34 | INFO    | app.main                     | ← GET /api/documents — 200 (1856 ms)
+2026-03-16 09:47:34 | INFO    | app.main                     | → GET /api/documents
+2026-03-16 09:47:34 | INFO    | app.documents                | list_documents — page=1, page_size=50
+2026-03-16 09:47:34 | INFO    | app.documents                | list_documents OK — total=20, returned=20
+2026-03-16 09:47:34 | INFO    | app.main                     | ← GET /api/documents — 200 (99 ms)
+2026-03-16 09:47:40 | INFO    | app.main                     | → GET /api/config
+2026-03-16 09:47:40 | INFO    | app.main                     | ← GET /api/config — 200 (3 ms)
+2026-03-16 09:47:40 | INFO    | app.main                     | → GET /api/config
+2026-03-16 09:47:40 | INFO    | app.main                     | ← GET /api/config — 200 (7 ms)
+2026-03-16 09:47:44 | INFO    | app.main                     | → POST /api/search
+2026-03-16 09:47:44 | INFO    | app.search_router            | Search request — text='black car', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-16 09:47:44 | INFO    | app.search                   | execute_search — strategy=openai, text='black car', has_image=False
+2026-03-16 09:47:44 | INFO    | app.openai_embeddings        | embed_text — 'black car'
+2026-03-16 09:48:01 | INFO    | app.openai_embeddings        | embed_text OK (16774 ms) — 3072-d vector
+2026-03-16 09:48:01 | INFO    | app.search                   | _execute_search — strategy=openai, text='black car', has_image=False, page=1/20
+2026-03-16 09:48:01 | INFO    | app.search                   |   vector_queries=1, search_text='black car', filter=None
+2026-03-16 09:48:01 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-16 09:48:02 | INFO    | app.search                   |   _execute_search done (1075 ms) — strategy=openai, total=20, returned=20
+2026-03-16 09:48:02 | INFO    | app.search                   |   Top result: id=02bfd127abff4e078577f192cf83a9bc, file=Mercedes-Clase-T-180d-2023-delantera.jpg, relevance=67.8%
+2026-03-16 09:48:02 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 09:48:02 | INFO    | app.search_router            |     OpenAI: 20 results (total=20)
+2026-03-16 09:48:02 | INFO    | app.main                     | ← POST /api/search — 200 (17953 ms)
+2026-03-16 09:48:14 | INFO    | app.main                     | → POST /api/search
+2026-03-16 09:48:14 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters=None
+2026-03-16 09:48:14 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 09:48:14 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-16 09:48:14 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 09:48:14 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 09:48:20 | INFO    | app.vision                   | vectorize_image OK (5785 ms) — 1024-d vector
+2026-03-16 09:48:20 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-16 09:48:20 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 09:48:20 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 09:48:20 | INFO    | app.search                   |   _execute_search done (365 ms) — strategy=openai, total=20, returned=20
+2026-03-16 09:48:20 | INFO    | app.search                   |   Top result: id=a40b7dcefaf54088a35e8676932fd3e2, file=crash.jpg, relevance=99.4%
+2026-03-16 09:48:20 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 09:48:20 | INFO    | app.search_router            |     OpenAI: 20 results (total=20)
+2026-03-16 09:48:20 | INFO    | app.main                     | ← POST /api/search — 200 (6206 ms)
+2026-03-16 09:48:31 | INFO    | app.main                     | → GET /api/documents
+2026-03-16 09:48:31 | INFO    | app.documents                | list_documents — page=1, page_size=50
+2026-03-16 09:48:31 | INFO    | app.documents                | list_documents OK — total=20, returned=20
+2026-03-16 09:48:31 | INFO    | app.main                     | ← GET /api/documents — 200 (92 ms)
+2026-03-16 09:48:31 | INFO    | app.main                     | → GET /api/documents
+2026-03-16 09:48:31 | INFO    | app.documents                | list_documents — page=1, page_size=50
+2026-03-16 09:48:31 | INFO    | app.documents                | list_documents OK — total=20, returned=20
+2026-03-16 09:48:31 | INFO    | app.main                     | ← GET /api/documents — 200 (119 ms)
+2026-03-16 09:48:36 | INFO    | app.main                     | → DELETE /api/documents/a40b7dcefaf54088a35e8676932fd3e2
+2026-03-16 09:48:36 | INFO    | app.documents                | delete_document — id=a40b7dcefaf54088a35e8676932fd3e2
+2026-03-16 09:48:38 | INFO    | app.documents                |   Deleted blob originals/a40b7dcefaf54088a35e8676932fd3e2.jpg
+2026-03-16 09:48:38 | INFO    | app.documents                |   Deleted blob thumbnails/a40b7dcefaf54088a35e8676932fd3e2.jpg
+2026-03-16 09:48:38 | INFO    | app.documents                | delete_document OK — id=a40b7dcefaf54088a35e8676932fd3e2
+2026-03-16 09:48:38 | INFO    | app.main                     | ← DELETE /api/documents/a40b7dcefaf54088a35e8676932fd3e2 — 200 (1276 ms)
+2026-03-16 09:48:40 | INFO    | app.main                     | → GET /api/config
+2026-03-16 09:48:40 | INFO    | app.main                     | ← GET /api/config — 200 (3 ms)
+2026-03-16 09:48:40 | INFO    | app.main                     | → GET /api/config
+2026-03-16 09:48:40 | INFO    | app.main                     | ← GET /api/config — 200 (4 ms)
+2026-03-16 09:48:45 | INFO    | app.main                     | → POST /api/search
+2026-03-16 09:48:45 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters=None
+2026-03-16 09:48:45 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 09:48:45 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-16 09:48:45 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 09:48:45 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 09:48:45 | INFO    | app.vision                   | vectorize_image OK (297 ms) — 1024-d vector
+2026-03-16 09:48:45 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-16 09:48:45 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 09:48:45 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 09:48:46 | INFO    | app.search                   |   _execute_search done (357 ms) — strategy=openai, total=19, returned=19
+2026-03-16 09:48:46 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 09:48:46 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 09:48:46 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-16 09:48:46 | INFO    | app.main                     | ← POST /api/search — 200 (675 ms)
+2026-03-16 09:48:59 | INFO    | app.main                     | → POST /api/search
+2026-03-16 09:48:59 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters={"objects":["car"]}
+2026-03-16 09:48:59 | INFO    | app.search_router            |   Parsed filters: {'objects': ['car']}
+2026-03-16 09:48:59 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 09:48:59 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-16 09:48:59 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 09:48:59 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 09:49:00 | INFO    | app.vision                   | vectorize_image OK (312 ms) — 1024-d vector
+2026-03-16 09:49:00 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-16 09:49:00 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=(objects/any(t: t eq 'car'))
+2026-03-16 09:49:00 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 09:49:00 | INFO    | app.search                   |   _execute_search done (221 ms) — strategy=openai, total=6, returned=6
+2026-03-16 09:49:00 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 09:49:00 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 09:49:00 | INFO    | app.search_router            |     OpenAI: 6 results (total=6)
+2026-03-16 09:49:00 | INFO    | app.main                     | ← POST /api/search — 200 (551 ms)
+2026-03-16 09:49:01 | INFO    | app.main                     | → POST /api/search
+2026-03-16 09:49:01 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters={"objects":["car","concrete floor"]}
+2026-03-16 09:49:01 | INFO    | app.search_router            |   Parsed filters: {'objects': ['car', 'concrete floor']}
+2026-03-16 09:49:01 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 09:49:01 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-16 09:49:01 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 09:49:01 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 09:49:01 | INFO    | app.vision                   | vectorize_image OK (114 ms) — 1024-d vector
+2026-03-16 09:49:01 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-16 09:49:01 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=(objects/any(t: t eq 'car') or objects/any(t: t eq 'concrete floor'))
+2026-03-16 09:49:01 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 09:49:01 | INFO    | app.search                   |   _execute_search done (142 ms) — strategy=openai, total=7, returned=7
+2026-03-16 09:49:01 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 09:49:01 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 09:49:01 | INFO    | app.search_router            |     OpenAI: 7 results (total=7)
+2026-03-16 09:49:01 | INFO    | app.main                     | ← POST /api/search — 200 (283 ms)
+2026-03-16 09:49:04 | INFO    | app.main                     | → POST /api/search
+2026-03-16 09:49:04 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters={"objects":["car"]}
+2026-03-16 09:49:04 | INFO    | app.search_router            |   Parsed filters: {'objects': ['car']}
+2026-03-16 09:49:04 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 09:49:04 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-16 09:49:04 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 09:49:04 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 09:49:04 | INFO    | app.vision                   | vectorize_image OK (114 ms) — 1024-d vector
+2026-03-16 09:49:04 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-16 09:49:04 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=(objects/any(t: t eq 'car'))
+2026-03-16 09:49:04 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 09:49:04 | INFO    | app.search                   |   _execute_search done (128 ms) — strategy=openai, total=6, returned=6
+2026-03-16 09:49:04 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 09:49:04 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 09:49:04 | INFO    | app.search_router            |     OpenAI: 6 results (total=6)
+2026-03-16 09:49:04 | INFO    | app.main                     | ← POST /api/search — 200 (258 ms)
+2026-03-16 09:49:05 | INFO    | app.main                     | → POST /api/search
+2026-03-16 09:49:05 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters=None
+2026-03-16 09:49:05 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 09:49:05 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-16 09:49:05 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 09:49:05 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 09:49:05 | INFO    | app.vision                   | vectorize_image OK (110 ms) — 1024-d vector
+2026-03-16 09:49:05 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-16 09:49:05 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 09:49:05 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 09:49:05 | INFO    | app.search                   |   _execute_search done (134 ms) — strategy=openai, total=19, returned=19
+2026-03-16 09:49:05 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 09:49:05 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 09:49:05 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-16 09:49:05 | INFO    | app.main                     | ← POST /api/search — 200 (266 ms)
+2026-03-16 09:49:25 | INFO    | app.main                     | → GET /api/documents
+2026-03-16 09:49:25 | INFO    | app.documents                | list_documents — page=1, page_size=50
+2026-03-16 09:49:25 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-16 09:49:25 | INFO    | app.main                     | ← GET /api/documents — 200 (132 ms)
+2026-03-16 09:49:25 | INFO    | app.main                     | → GET /api/documents
+2026-03-16 09:49:25 | INFO    | app.documents                | list_documents — page=1, page_size=50
+2026-03-16 09:49:25 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-16 09:49:25 | INFO    | app.main                     | ← GET /api/documents — 200 (98 ms)
+2026-03-16 09:49:31 | INFO    | app.main                     | → GET /api/config
+2026-03-16 09:49:31 | INFO    | app.main                     | ← GET /api/config — 200 (3 ms)
+2026-03-16 09:49:31 | INFO    | app.main                     | → GET /api/config
+2026-03-16 09:49:31 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-16 09:49:39 | INFO    | app.main                     | → POST /api/search
+2026-03-16 09:49:39 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters=None
+2026-03-16 09:49:39 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 09:49:39 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-16 09:49:39 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 09:49:39 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 09:49:40 | INFO    | app.vision                   | vectorize_image OK (429 ms) — 1024-d vector
+2026-03-16 09:49:40 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-16 09:49:40 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 09:49:40 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 09:49:40 | INFO    | app.search                   |   _execute_search done (383 ms) — strategy=openai, total=19, returned=19
+2026-03-16 09:49:40 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 09:49:40 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 09:49:40 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-16 09:49:40 | INFO    | app.main                     | ← POST /api/search — 200 (823 ms)
+2026-03-16 14:42:54 | INFO    | app.main                     | ===== Application shutting down =====
+2026-03-16 14:42:54 | INFO    | app.vision                   | Vision resources closed
+2026-03-16 14:42:54 | INFO    | app.search                   | Search client closed
+2026-03-16 14:42:54 | INFO    | app.openai_embeddings        | OpenAI resources closed
+2026-03-16 14:42:54 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
+2026-03-16 14:42:54 | INFO    | app.blob_storage             | Blob client closed
+2026-03-16 14:42:54 | INFO    | app.main                     | ===== Shutdown complete =====
+2026-03-16 14:43:14 | INFO    | app.main                     | Log file → C:\Angel\AI GBB\Demos\visual_ai_search\backend\logs\app.log
+2026-03-16 14:43:14 | INFO    | app.main                     | ===== Application starting up =====
+2026-03-16 14:43:14 | INFO    | app.blob_storage             | Blob init — account=demomovistar
+2026-03-16 14:43:15 | INFO    | app.blob_storage             | Container 'originals' already exists
+2026-03-16 14:43:15 | INFO    | app.blob_storage             | Container 'thumbnails' already exists
+2026-03-16 14:43:15 | INFO    | app.blob_storage             | Blob init OK
+2026-03-16 14:43:15 | INFO    | app.search_index             | SearchIndex init — endpoint=https://visual-ai-search.search.windows.net
+2026-03-16 14:43:15 | INFO    | app.search_index             | Creating/updating index 'visual-search-index' (15 fields, 2 vector profiles)
+2026-03-16 14:43:17 | INFO    | app.search_index             | Index 'visual-search-index' ready
+2026-03-16 14:43:17 | INFO    | app.search_index             | SearchIndex init OK
+2026-03-16 14:43:17 | INFO    | app.search                   | Search init — endpoint=https://visual-ai-search.search.windows.net, index=visual-search-index
+2026-03-16 14:43:17 | INFO    | app.search                   | Search init OK
+2026-03-16 14:43:17 | INFO    | app.upload                   | Upload init — creating sync SearchClient for upserts
+2026-03-16 14:43:17 | INFO    | app.upload                   | Upload init OK
+2026-03-16 14:43:17 | INFO    | app.documents                | Documents init — creating sync SearchClient
+2026-03-16 14:43:17 | INFO    | app.documents                | Documents init OK
+2026-03-16 14:43:17 | INFO    | app.openai_embeddings        | OpenAI init — endpoint=https://test-tool.openai.azure.com, deployment=text-embedding-3-large
+2026-03-16 14:43:25 | INFO    | app.openai_embeddings        | OpenAI init OK — token warm-up (6869 ms)
+2026-03-16 14:43:25 | INFO    | app.gpt_analysis             | GPT Analysis init — endpoint=https://test-tool.openai.azure.com, deployment=gpt-4.1
+2026-03-16 14:43:29 | INFO    | app.gpt_analysis             | GPT Analysis init OK — token warm-up (3113 ms)
+2026-03-16 14:43:29 | INFO    | app.vision                   | Vision init — endpoint=https://visual-ai-search.cognitiveservices.azure.com
+2026-03-16 14:43:33 | INFO    | app.vision                   | Vision init OK — connection warm-up 200 (500 ms)
+2026-03-16 14:43:33 | INFO    | app.main                     | ===== All services ready (18968 ms) =====
+2026-03-16 14:43:39 | INFO    | app.main                     | → GET /api/config
+2026-03-16 14:43:39 | INFO    | app.main                     | ← GET /api/config — 200 (27 ms)
+2026-03-16 14:43:39 | INFO    | app.main                     | → GET /api/config
+2026-03-16 14:43:39 | INFO    | app.main                     | ← GET /api/config — 200 (1 ms)
+2026-03-16 14:43:51 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:43:51 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=vision, page=1/20, has_image=False, filters=None
+2026-03-16 14:43:51 | INFO    | app.search                   | execute_search — strategy=vision, text='yellow sign', has_image=False
+2026-03-16 14:43:51 | INFO    | app.vision                   | vectorize_text — 'yellow sign'
+2026-03-16 14:43:52 | INFO    | app.vision                   | vectorize_text OK (264 ms) — 1024-d vector
+2026-03-16 14:43:52 | INFO    | app.search                   | _execute_search — strategy=vision, text='yellow sign', has_image=False, page=1/20
+2026-03-16 14:43:52 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=None
+2026-03-16 14:43:52 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-16 14:43:52 | INFO    | app.search                   |   _execute_search done (496 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:43:52 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=69.1%
+2026-03-16 14:43:52 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:43:52 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:43:52 | INFO    | app.main                     | ← POST /api/search — 200 (805 ms)
+2026-03-16 14:44:02 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:44:02 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-16 14:44:02 | INFO    | app.search                   | execute_search — strategy=openai, text='yellow sign', has_image=False
+2026-03-16 14:44:02 | INFO    | app.openai_embeddings        | embed_text — 'yellow sign'
+2026-03-16 14:44:07 | INFO    | app.openai_embeddings        | embed_text OK (5342 ms) — 3072-d vector
+2026-03-16 14:44:07 | INFO    | app.search                   | _execute_search — strategy=openai, text='yellow sign', has_image=False, page=1/20
+2026-03-16 14:44:07 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=None
+2026-03-16 14:44:07 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-16 14:44:08 | INFO    | app.search                   |   _execute_search done (572 ms) — strategy=openai, total=19, returned=19
+2026-03-16 14:44:08 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=69.1%
+2026-03-16 14:44:08 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:44:08 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-16 14:44:08 | INFO    | app.main                     | ← POST /api/search — 200 (5926 ms)
+2026-03-16 14:44:15 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:44:15 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=compare, page=1/20, has_image=False, filters=None
+2026-03-16 14:44:15 | INFO    | app.search                   | execute_search — strategy=compare, text='yellow sign', has_image=False
+2026-03-16 14:44:15 | INFO    | app.search                   |   Compare mode → pre-computing all vectors in parallel
+2026-03-16 14:44:15 | INFO    | app.vision                   | vectorize_text — 'yellow sign'
+2026-03-16 14:44:15 | INFO    | app.openai_embeddings        | embed_text — 'yellow sign'
+2026-03-16 14:44:15 | INFO    | app.vision                   | vectorize_text OK (231 ms) — 1024-d vector
+2026-03-16 14:44:16 | INFO    | app.openai_embeddings        | embed_text OK (566 ms) — 3072-d vector
+2026-03-16 14:44:16 | INFO    | app.search                   |   Vectors ready: ['vision_text', 'openai_text']
+2026-03-16 14:44:16 | INFO    | app.search                   | _execute_search — strategy=vision, text='yellow sign', has_image=False, page=1/20
+2026-03-16 14:44:16 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=None
+2026-03-16 14:44:16 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-16 14:44:16 | INFO    | app.search                   | _execute_search — strategy=openai, text='yellow sign', has_image=False, page=1/20
+2026-03-16 14:44:16 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=None
+2026-03-16 14:44:16 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-16 14:44:16 | INFO    | app.search                   |   _execute_search done (221 ms) — strategy=openai, total=19, returned=19
+2026-03-16 14:44:16 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=69.1%
+2026-03-16 14:44:16 | INFO    | app.search                   |   _execute_search done (488 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:44:16 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=69.1%
+2026-03-16 14:44:16 | INFO    | app.search_router            |   Search complete — mode=compare
+2026-03-16 14:44:16 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:44:16 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-16 14:44:16 | INFO    | app.main                     | ← POST /api/search — 200 (1071 ms)
+2026-03-16 14:45:06 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:45:06 | INFO    | app.search_router            | Search request — text=None, strategy=compare, page=1/20, has_image=True, filters=None
+2026-03-16 14:45:06 | INFO    | app.search_router            |   Image file: scratches.jpg (48283 bytes)
+2026-03-16 14:45:06 | INFO    | app.search                   | execute_search — strategy=compare, text=None, has_image=True
+2026-03-16 14:45:06 | INFO    | app.search                   |   Compare mode → pre-computing all vectors in parallel
+2026-03-16 14:45:06 | INFO    | app.search                   |   Image resized for vectorization: 48283 → 42909 bytes
+2026-03-16 14:45:06 | INFO    | app.vision                   | vectorize_image — 42909 bytes
+2026-03-16 14:45:07 | INFO    | app.vision                   | vectorize_image OK (341 ms) — 1024-d vector
+2026-03-16 14:45:07 | INFO    | app.search                   |   Vectors ready: ['vision_image']
+2026-03-16 14:45:07 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:45:07 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 14:45:07 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:45:07 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-16 14:45:07 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 14:45:07 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:45:07 | INFO    | app.search                   |   _execute_search done (445 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:45:07 | INFO    | app.search                   |   Top result: id=b1471218d8fa4f58abe5b78771be3887, file=reparar-aran-azos-del-coche.jpeg, relevance=96.5%
+2026-03-16 14:45:07 | INFO    | app.search                   |   _execute_search done (409 ms) — strategy=openai, total=19, returned=19
+2026-03-16 14:45:07 | INFO    | app.search                   |   Top result: id=b1471218d8fa4f58abe5b78771be3887, file=reparar-aran-azos-del-coche.jpeg, relevance=96.5%
+2026-03-16 14:45:07 | INFO    | app.search_router            |   Search complete — mode=compare
+2026-03-16 14:45:07 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:45:07 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-16 14:45:07 | INFO    | app.main                     | ← POST /api/search — 200 (1029 ms)
+2026-03-16 14:47:09 | INFO    | app.main                     | → GET /api/config
+2026-03-16 14:47:09 | INFO    | app.main                     | ← GET /api/config — 200 (3 ms)
+2026-03-16 14:47:09 | INFO    | app.main                     | → GET /api/config
+2026-03-16 14:47:09 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-16 14:47:17 | INFO    | app.main                     | ===== Application shutting down =====
+2026-03-16 14:47:17 | INFO    | app.vision                   | Vision resources closed
+2026-03-16 14:47:17 | INFO    | app.search                   | Search client closed
+2026-03-16 14:47:17 | INFO    | app.openai_embeddings        | OpenAI resources closed
+2026-03-16 14:47:17 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
+2026-03-16 14:47:17 | INFO    | app.blob_storage             | Blob client closed
+2026-03-16 14:47:17 | INFO    | app.main                     | ===== Shutdown complete =====
+2026-03-16 14:47:29 | INFO    | app.main                     | Log file → C:\Angel\AI GBB\Demos\visual_ai_search\backend\logs\app.log
+2026-03-16 14:47:29 | INFO    | app.main                     | ===== Application starting up =====
+2026-03-16 14:47:29 | INFO    | app.blob_storage             | Blob init — account=demomovistar
+2026-03-16 14:47:29 | INFO    | app.blob_storage             | Container 'originals' already exists
+2026-03-16 14:47:29 | INFO    | app.blob_storage             | Container 'thumbnails' already exists
+2026-03-16 14:47:29 | INFO    | app.blob_storage             | Blob init OK
+2026-03-16 14:47:29 | INFO    | app.search_index             | SearchIndex init — endpoint=https://visual-ai-search.search.windows.net
+2026-03-16 14:47:29 | INFO    | app.search_index             | Creating/updating index 'visual-search-index' (15 fields, 2 vector profiles)
+2026-03-16 14:47:30 | INFO    | app.search_index             | Index 'visual-search-index' ready
+2026-03-16 14:47:30 | INFO    | app.search_index             | SearchIndex init OK
+2026-03-16 14:47:30 | INFO    | app.search                   | Search init — endpoint=https://visual-ai-search.search.windows.net, index=visual-search-index
+2026-03-16 14:47:30 | INFO    | app.search                   | Search init OK
+2026-03-16 14:47:30 | INFO    | app.upload                   | Upload init — creating sync SearchClient for upserts
+2026-03-16 14:47:30 | INFO    | app.upload                   | Upload init OK
+2026-03-16 14:47:30 | INFO    | app.documents                | Documents init — creating sync SearchClient
+2026-03-16 14:47:30 | INFO    | app.documents                | Documents init OK
+2026-03-16 14:47:30 | INFO    | app.openai_embeddings        | OpenAI init — endpoint=https://test-tool.openai.azure.com, deployment=text-embedding-3-large
+2026-03-16 14:47:34 | INFO    | app.openai_embeddings        | OpenAI init OK — token warm-up (3098 ms)
+2026-03-16 14:47:34 | INFO    | app.gpt_analysis             | GPT Analysis init — endpoint=https://test-tool.openai.azure.com, deployment=gpt-4.1
+2026-03-16 14:47:37 | INFO    | app.gpt_analysis             | GPT Analysis init OK — token warm-up (2870 ms)
+2026-03-16 14:47:37 | INFO    | app.vision                   | Vision init — endpoint=https://visual-ai-search.cognitiveservices.azure.com
+2026-03-16 14:47:40 | INFO    | app.vision                   | Vision init OK — connection warm-up 200 (247 ms)
+2026-03-16 14:47:40 | INFO    | app.main                     | ===== All services ready (11462 ms) =====
+2026-03-16 14:47:44 | INFO    | app.main                     | → GET /api/config
+2026-03-16 14:47:44 | INFO    | app.main                     | ← GET /api/config — 200 (5 ms)
+2026-03-16 14:47:44 | INFO    | app.main                     | → GET /api/config
+2026-03-16 14:47:44 | INFO    | app.main                     | ← GET /api/config — 200 (1 ms)
+2026-03-16 14:47:51 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:47:51 | INFO    | app.search_router            | Search request — text=None, strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:47:51 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:47:51 | INFO    | app.search                   | execute_search — strategy=vision, text=None, has_image=True
+2026-03-16 14:47:51 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:47:51 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:47:52 | INFO    | app.vision                   | vectorize_image OK (260 ms) — 1024-d vector
+2026-03-16 14:47:52 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:47:52 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 14:47:52 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:47:52 | INFO    | app.search                   |   _execute_search done (397 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:47:52 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 14:47:52 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:47:52 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:47:52 | INFO    | app.main                     | ← POST /api/search — 200 (786 ms)
+2026-03-16 14:47:57 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:47:57 | INFO    | app.search_router            | Search request — text=None, strategy=vision, page=1/20, has_image=True, filters={"objects":["alloy wheels"]}
+2026-03-16 14:47:57 | INFO    | app.search_router            |   Parsed filters: {'objects': ['alloy wheels']}
+2026-03-16 14:47:57 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:47:57 | INFO    | app.search                   | execute_search — strategy=vision, text=None, has_image=True
+2026-03-16 14:47:57 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:47:57 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:47:57 | INFO    | app.vision                   | vectorize_image OK (250 ms) — 1024-d vector
+2026-03-16 14:47:57 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:47:57 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=(objects/any(t: t eq 'alloy wheels'))
+2026-03-16 14:47:57 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:47:57 | INFO    | app.search                   |   _execute_search done (111 ms) — strategy=vision, total=2, returned=2
+2026-03-16 14:47:57 | INFO    | app.search                   |   Top result: id=02bfd127abff4e078577f192cf83a9bc, file=Mercedes-Clase-T-180d-2023-delantera.jpg, relevance=71.2%
+2026-03-16 14:47:57 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:47:57 | INFO    | app.search_router            |     Vision: 2 results (total=2)
+2026-03-16 14:47:57 | INFO    | app.main                     | ← POST /api/search — 200 (383 ms)
+2026-03-16 14:47:59 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:47:59 | INFO    | app.search_router            | Search request — text=None, strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:47:59 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:47:59 | INFO    | app.search                   | execute_search — strategy=vision, text=None, has_image=True
+2026-03-16 14:47:59 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:47:59 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:47:59 | INFO    | app.vision                   | vectorize_image OK (142 ms) — 1024-d vector
+2026-03-16 14:47:59 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:47:59 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 14:47:59 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:48:00 | INFO    | app.search                   |   _execute_search done (178 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:48:00 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 14:48:00 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:00 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:48:00 | INFO    | app.main                     | ← POST /api/search — 200 (342 ms)
+2026-03-16 14:48:01 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:01 | INFO    | app.search_router            | Search request — text=None, strategy=vision, page=1/20, has_image=True, filters={"objects":["building"]}
+2026-03-16 14:48:01 | INFO    | app.search_router            |   Parsed filters: {'objects': ['building']}
+2026-03-16 14:48:01 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:01 | INFO    | app.search                   | execute_search — strategy=vision, text=None, has_image=True
+2026-03-16 14:48:01 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:01 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:01 | INFO    | app.vision                   | vectorize_image OK (99 ms) — 1024-d vector
+2026-03-16 14:48:01 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:48:01 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=(objects/any(t: t eq 'building'))
+2026-03-16 14:48:01 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:48:01 | INFO    | app.search                   |   _execute_search done (110 ms) — strategy=vision, total=2, returned=2
+2026-03-16 14:48:01 | INFO    | app.search                   |   Top result: id=6ddd192b09a34363809e8bc5d6f96162, file=eileen-pan-5d5DSRQ5dUc-unsplash.jpg, relevance=67.0%
+2026-03-16 14:48:01 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:01 | INFO    | app.search_router            |     Vision: 2 results (total=2)
+2026-03-16 14:48:01 | INFO    | app.main                     | ← POST /api/search — 200 (223 ms)
+2026-03-16 14:48:03 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:03 | INFO    | app.search_router            | Search request — text=None, strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:48:03 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:03 | INFO    | app.search                   | execute_search — strategy=vision, text=None, has_image=True
+2026-03-16 14:48:03 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:03 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:03 | INFO    | app.vision                   | vectorize_image OK (113 ms) — 1024-d vector
+2026-03-16 14:48:03 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:48:03 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 14:48:03 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:48:04 | INFO    | app.search                   |   _execute_search done (143 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:48:04 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 14:48:04 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:04 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:48:04 | INFO    | app.main                     | ← POST /api/search — 200 (275 ms)
+2026-03-16 14:48:06 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:06 | INFO    | app.search_router            | Search request — text=None, strategy=vision, page=1/20, has_image=True, filters={"objects":["garage door"]}
+2026-03-16 14:48:06 | INFO    | app.search_router            |   Parsed filters: {'objects': ['garage door']}
+2026-03-16 14:48:06 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:06 | INFO    | app.search                   | execute_search — strategy=vision, text=None, has_image=True
+2026-03-16 14:48:06 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:06 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:06 | INFO    | app.vision                   | vectorize_image OK (91 ms) — 1024-d vector
+2026-03-16 14:48:06 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:48:06 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=(objects/any(t: t eq 'garage door'))
+2026-03-16 14:48:06 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:48:06 | INFO    | app.search                   |   _execute_search done (134 ms) — strategy=vision, total=2, returned=2
+2026-03-16 14:48:06 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 14:48:06 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:06 | INFO    | app.search_router            |     Vision: 2 results (total=2)
+2026-03-16 14:48:06 | INFO    | app.main                     | ← POST /api/search — 200 (238 ms)
+2026-03-16 14:48:08 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:08 | INFO    | app.search_router            | Search request — text=None, strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:48:08 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:08 | INFO    | app.search                   | execute_search — strategy=vision, text=None, has_image=True
+2026-03-16 14:48:08 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:08 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:08 | INFO    | app.vision                   | vectorize_image OK (120 ms) — 1024-d vector
+2026-03-16 14:48:08 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:48:08 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 14:48:08 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:48:09 | INFO    | app.search                   |   _execute_search done (123 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:48:09 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 14:48:09 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:09 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:48:09 | INFO    | app.main                     | ← POST /api/search — 200 (254 ms)
+2026-03-16 14:48:21 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:21 | INFO    | app.search_router            | Search request — text='grey', strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:48:21 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:21 | INFO    | app.search                   | execute_search — strategy=vision, text='grey', has_image=True
+2026-03-16 14:48:21 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:21 | INFO    | app.vision                   | vectorize_text — 'grey'
+2026-03-16 14:48:21 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:21 | INFO    | app.vision                   | vectorize_text OK (248 ms) — 1024-d vector
+2026-03-16 14:48:21 | INFO    | app.vision                   | vectorize_image OK (273 ms) — 1024-d vector
+2026-03-16 14:48:21 | INFO    | app.search                   | _execute_search — strategy=vision, text='grey', has_image=True, page=1/20
+2026-03-16 14:48:21 | INFO    | app.search                   |   vector_queries=2, search_text='grey', filter=None
+2026-03-16 14:48:21 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=3
+2026-03-16 14:48:21 | INFO    | app.search                   |   _execute_search done (281 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:48:21 | INFO    | app.search                   |   Top result: id=c630b79a6172488f80fc7fb8e56422f1, file=Mercedes-Clase-T-180d-prueba-1-1536x864.jpeg, relevance=67.4%
+2026-03-16 14:48:21 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:21 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:48:21 | INFO    | app.main                     | ← POST /api/search — 200 (577 ms)
+2026-03-16 14:48:26 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:26 | INFO    | app.search_router            | Search request — text=None, strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:48:26 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:26 | INFO    | app.search                   | execute_search — strategy=vision, text=None, has_image=True
+2026-03-16 14:48:26 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:26 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:26 | INFO    | app.vision                   | vectorize_image OK (311 ms) — 1024-d vector
+2026-03-16 14:48:26 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:48:26 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 14:48:26 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:48:27 | INFO    | app.search                   |   _execute_search done (161 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:48:27 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 14:48:27 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:27 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:48:27 | INFO    | app.main                     | ← POST /api/search — 200 (488 ms)
+2026-03-16 14:48:31 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:31 | INFO    | app.search_router            | Search request — text='white', strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:48:31 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:31 | INFO    | app.search                   | execute_search — strategy=vision, text='white', has_image=True
+2026-03-16 14:48:31 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:31 | INFO    | app.vision                   | vectorize_text — 'white'
+2026-03-16 14:48:31 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:31 | INFO    | app.vision                   | vectorize_text OK (101 ms) — 1024-d vector
+2026-03-16 14:48:31 | INFO    | app.vision                   | vectorize_image OK (279 ms) — 1024-d vector
+2026-03-16 14:48:31 | INFO    | app.search                   | _execute_search — strategy=vision, text='white', has_image=True, page=1/20
+2026-03-16 14:48:31 | INFO    | app.search                   |   vector_queries=2, search_text='white', filter=None
+2026-03-16 14:48:31 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=3
+2026-03-16 14:48:32 | INFO    | app.search                   |   _execute_search done (253 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:48:32 | INFO    | app.search                   |   Top result: id=8a9af18ed82e4e8fb8b784bd6220b87c, file=mercedes-clase-a-sedan-prueba-16.jpg, relevance=63.0%
+2026-03-16 14:48:32 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:32 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:48:32 | INFO    | app.main                     | ← POST /api/search — 200 (561 ms)
+2026-03-16 14:48:36 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:36 | INFO    | app.search_router            | Search request — text=None, strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:48:36 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:36 | INFO    | app.search                   | execute_search — strategy=vision, text=None, has_image=True
+2026-03-16 14:48:36 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:36 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:36 | INFO    | app.vision                   | vectorize_image OK (112 ms) — 1024-d vector
+2026-03-16 14:48:36 | INFO    | app.search                   | _execute_search — strategy=vision, text=None, has_image=True, page=1/20
+2026-03-16 14:48:36 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-16 14:48:36 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-16 14:48:36 | INFO    | app.search                   |   _execute_search done (165 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:48:36 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-16 14:48:36 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:36 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:48:36 | INFO    | app.main                     | ← POST /api/search — 200 (294 ms)
+2026-03-16 14:48:44 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:44 | INFO    | app.search_router            | Search request — text='yellow', strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:48:44 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:44 | INFO    | app.search                   | execute_search — strategy=vision, text='yellow', has_image=True
+2026-03-16 14:48:44 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:44 | INFO    | app.vision                   | vectorize_text — 'yellow'
+2026-03-16 14:48:44 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:45 | INFO    | app.vision                   | vectorize_text OK (266 ms) — 1024-d vector
+2026-03-16 14:48:45 | INFO    | app.vision                   | vectorize_image OK (294 ms) — 1024-d vector
+2026-03-16 14:48:45 | INFO    | app.search                   | _execute_search — strategy=vision, text='yellow', has_image=True, page=1/20
+2026-03-16 14:48:45 | INFO    | app.search                   |   vector_queries=2, search_text='yellow', filter=None
+2026-03-16 14:48:45 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=3
+2026-03-16 14:48:45 | INFO    | app.search                   |   _execute_search done (263 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:48:45 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=62.1%
+2026-03-16 14:48:45 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:45 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:48:45 | INFO    | app.main                     | ← POST /api/search — 200 (576 ms)
+2026-03-16 14:48:49 | INFO    | app.main                     | → POST /api/search
+2026-03-16 14:48:49 | INFO    | app.search_router            | Search request — text='yellow signs', strategy=vision, page=1/20, has_image=True, filters=None
+2026-03-16 14:48:49 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-16 14:48:49 | INFO    | app.search                   | execute_search — strategy=vision, text='yellow signs', has_image=True
+2026-03-16 14:48:49 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-16 14:48:49 | INFO    | app.vision                   | vectorize_text — 'yellow signs'
+2026-03-16 14:48:49 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-16 14:48:50 | INFO    | app.vision                   | vectorize_text OK (89 ms) — 1024-d vector
+2026-03-16 14:48:50 | INFO    | app.vision                   | vectorize_image OK (236 ms) — 1024-d vector
+2026-03-16 14:48:50 | INFO    | app.search                   | _execute_search — strategy=vision, text='yellow signs', has_image=True, page=1/20
+2026-03-16 14:48:50 | INFO    | app.search                   |   vector_queries=2, search_text='yellow signs', filter=None
+2026-03-16 14:48:50 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=3
+2026-03-16 14:48:50 | INFO    | app.search                   |   _execute_search done (173 ms) — strategy=vision, total=19, returned=19
+2026-03-16 14:48:50 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=69.1%
+2026-03-16 14:48:50 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-16 14:48:50 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-16 14:48:50 | INFO    | app.main                     | ← POST /api/search — 200 (424 ms)
+2026-03-16 16:55:45 | INFO    | app.main                     | ===== Application shutting down =====
+2026-03-16 16:55:45 | INFO    | app.vision                   | Vision resources closed
+2026-03-16 16:55:45 | INFO    | app.search                   | Search client closed
+2026-03-16 16:55:45 | INFO    | app.openai_embeddings        | OpenAI resources closed
+2026-03-16 16:55:45 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
+2026-03-16 16:55:45 | INFO    | app.blob_storage             | Blob client closed
+2026-03-16 16:55:45 | INFO    | app.main                     | ===== Shutdown complete =====
+2026-03-16 16:59:19 | INFO    | app.main                     | Log file → C:\Angel\AI GBB\Demos\visual_ai_search\backend\logs\app.log
+2026-03-16 16:59:19 | INFO    | app.main                     | ===== Application starting up =====
+2026-03-16 16:59:19 | INFO    | app.blob_storage             | Blob init — account=demomovistar
+2026-03-16 16:59:20 | INFO    | app.blob_storage             | Container 'originals' already exists
+2026-03-16 16:59:20 | INFO    | app.blob_storage             | Container 'thumbnails' already exists
+2026-03-16 16:59:20 | INFO    | app.blob_storage             | Blob init OK
+2026-03-16 16:59:20 | INFO    | app.search_index             | SearchIndex init — endpoint=https://visual-ai-search.search.windows.net
+2026-03-16 16:59:20 | INFO    | app.search_index             | Creating/updating index 'visual-search-index' (15 fields, 2 vector profiles)
+2026-03-16 16:59:21 | INFO    | app.search_index             | Index 'visual-search-index' ready
+2026-03-16 16:59:21 | INFO    | app.search_index             | SearchIndex init OK
+2026-03-16 16:59:21 | INFO    | app.search                   | Search init — endpoint=https://visual-ai-search.search.windows.net, index=visual-search-index
+2026-03-16 16:59:21 | INFO    | app.search                   | Search init OK
+2026-03-16 16:59:21 | INFO    | app.upload                   | Upload init — creating sync SearchClient for upserts
+2026-03-16 16:59:21 | INFO    | app.upload                   | Upload init OK
+2026-03-16 16:59:21 | INFO    | app.documents                | Documents init — creating sync SearchClient
+2026-03-16 16:59:21 | INFO    | app.documents                | Documents init OK
+2026-03-16 16:59:21 | INFO    | app.openai_embeddings        | OpenAI init — endpoint=https://test-tool.openai.azure.com, deployment=text-embedding-3-large
+2026-03-16 16:59:30 | INFO    | app.openai_embeddings        | OpenAI init OK — token warm-up (7962 ms)
+2026-03-16 16:59:30 | INFO    | app.gpt_analysis             | GPT Analysis init — endpoint=https://test-tool.openai.azure.com, deployment=gpt-4.1
+2026-03-16 16:59:34 | INFO    | app.gpt_analysis             | GPT Analysis init OK — token warm-up (3492 ms)
+2026-03-16 16:59:34 | INFO    | app.vision                   | Vision init — endpoint=https://visual-ai-search.cognitiveservices.azure.com
+2026-03-16 16:59:38 | INFO    | app.vision                   | Vision init OK — connection warm-up 200 (254 ms)
+2026-03-16 16:59:38 | INFO    | app.main                     | ===== All services ready (18380 ms) =====
+2026-03-16 17:00:07 | INFO    | app.main                     | → GET /api/config
+2026-03-16 17:00:07 | INFO    | app.main                     | ← GET /api/config — 200 (28 ms)
+2026-03-16 17:00:07 | INFO    | app.main                     | → GET /api/config
+2026-03-16 17:00:07 | INFO    | app.main                     | ← GET /api/config — 200 (1 ms)
+2026-03-16 17:00:10 | INFO    | app.main                     | → GET /api/documents
+2026-03-16 17:00:10 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-16 17:00:11 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-16 17:00:11 | INFO    | app.main                     | ← GET /api/documents — 200 (1268 ms)
+2026-03-16 17:00:11 | INFO    | app.main                     | → GET /api/documents
+2026-03-16 17:00:11 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-16 17:00:11 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-16 17:00:11 | INFO    | app.main                     | ← GET /api/documents — 200 (84 ms)
+2026-03-17 08:40:42 | INFO    | app.main                     | → GET /api/config
+2026-03-17 08:40:42 | INFO    | app.main                     | ← GET /api/config — 200 (10 ms)
+2026-03-17 08:40:42 | INFO    | app.main                     | → GET /api/config
+2026-03-17 08:40:42 | INFO    | app.main                     | ← GET /api/config — 200 (7 ms)
+2026-03-18 09:22:25 | INFO    | app.main                     | → GET /api/config
+2026-03-18 09:22:25 | INFO    | app.main                     | ← GET /api/config — 200 (56 ms)
+2026-03-18 09:22:25 | INFO    | app.main                     | → GET /api/config
+2026-03-18 09:22:25 | INFO    | app.main                     | ← GET /api/config — 200 (7 ms)
+2026-03-18 09:22:33 | INFO    | app.main                     | → POST /api/search
+2026-03-18 09:22:34 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=vision, page=1/20, has_image=False, filters=None
+2026-03-18 09:22:34 | INFO    | app.search                   | execute_search — strategy=vision, text='yellow sign', has_image=False
+2026-03-18 09:22:55 | INFO    | app.vision                   | vectorize_text — 'yellow sign'
+2026-03-18 09:22:56 | INFO    | app.vision                   | vectorize_text OK (651 ms) — 1024-d vector
+2026-03-18 09:22:56 | INFO    | app.search                   | _execute_search — strategy=vision, text='yellow sign', has_image=False, page=1/20
+2026-03-18 09:22:56 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=None
+2026-03-18 09:22:56 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 09:22:57 | INFO    | app.search                   |   _execute_search done (1043 ms) — strategy=vision, total=19, returned=19
+2026-03-18 09:22:57 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=69.1%
+2026-03-18 09:22:57 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 09:22:57 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-18 09:22:57 | INFO    | app.main                     | ← POST /api/search — 200 (23285 ms)
+2026-03-18 09:23:02 | INFO    | app.main                     | → POST /api/search
+2026-03-18 09:23:02 | INFO    | app.search_router            | Search request — text='yellow car', strategy=vision, page=1/20, has_image=False, filters=None
+2026-03-18 09:23:02 | INFO    | app.search                   | execute_search — strategy=vision, text='yellow car', has_image=False
+2026-03-18 09:23:02 | INFO    | app.vision                   | vectorize_text — 'yellow car'
+2026-03-18 09:23:02 | INFO    | app.vision                   | vectorize_text OK (243 ms) — 1024-d vector
+2026-03-18 09:23:02 | INFO    | app.search                   | _execute_search — strategy=vision, text='yellow car', has_image=False, page=1/20
+2026-03-18 09:23:02 | INFO    | app.search                   |   vector_queries=1, search_text='yellow car', filter=None
+2026-03-18 09:23:02 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 09:23:02 | INFO    | app.search                   |   _execute_search done (282 ms) — strategy=vision, total=19, returned=19
+2026-03-18 09:23:02 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=41.5%
+2026-03-18 09:23:02 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 09:23:02 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-18 09:23:02 | INFO    | app.main                     | ← POST /api/search — 200 (543 ms)
+2026-03-18 09:23:05 | INFO    | app.main                     | → POST /api/search
+2026-03-18 09:23:05 | INFO    | app.search_router            | Search request — text='car', strategy=vision, page=1/20, has_image=False, filters=None
+2026-03-18 09:23:05 | INFO    | app.search                   | execute_search — strategy=vision, text='car', has_image=False
+2026-03-18 09:23:05 | INFO    | app.vision                   | vectorize_text — 'car'
+2026-03-18 09:23:05 | INFO    | app.vision                   | vectorize_text OK (86 ms) — 1024-d vector
+2026-03-18 09:23:05 | INFO    | app.search                   | _execute_search — strategy=vision, text='car', has_image=False, page=1/20
+2026-03-18 09:23:05 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=None
+2026-03-18 09:23:05 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 09:23:05 | INFO    | app.search                   |   _execute_search done (258 ms) — strategy=vision, total=19, returned=19
+2026-03-18 09:23:05 | INFO    | app.search                   |   Top result: id=30b18e069f1c4873b2b9b5dd65ae09cb, file=mercedes-benz-clase-e-2024-exterior-1-soymotor.jpg, relevance=64.4%
+2026-03-18 09:23:05 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 09:23:05 | INFO    | app.search_router            |     Vision: 19 results (total=19)
+2026-03-18 09:23:05 | INFO    | app.main                     | ← POST /api/search — 200 (361 ms)
+2026-03-18 09:23:16 | INFO    | app.main                     | ===== Application shutting down =====
+2026-03-18 09:23:16 | INFO    | app.vision                   | Vision resources closed
+2026-03-18 09:23:16 | INFO    | app.search                   | Search client closed
+2026-03-18 09:23:16 | INFO    | app.openai_embeddings        | OpenAI resources closed
+2026-03-18 09:23:16 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
+2026-03-18 09:23:16 | INFO    | app.blob_storage             | Blob client closed
+2026-03-18 09:23:16 | INFO    | app.main                     | ===== Shutdown complete =====
