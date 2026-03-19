@@ -479,20 +479,30 @@ $secretsYaml
       env:
 $envVarsYaml
       probes:
+      - type: Startup
+        httpGet:
+          path: /api/health
+          port: $CONTAINER_PORT
+        initialDelaySeconds: 5
+        periodSeconds: 30
+        failureThreshold: 10
+        timeoutSeconds: 5
       - type: Liveness
         httpGet:
           path: /api/health
           port: $CONTAINER_PORT
-        initialDelaySeconds: 30
+        initialDelaySeconds: 60
         periodSeconds: 30
         failureThreshold: 5
+        timeoutSeconds: 5
       - type: Readiness
         httpGet:
           path: /api/health
           port: $CONTAINER_PORT
-        initialDelaySeconds: 15
+        initialDelaySeconds: 60
         periodSeconds: 10
         failureThreshold: 5
+        timeoutSeconds: 5
     scale:
       minReplicas: 1
       maxReplicas: 3

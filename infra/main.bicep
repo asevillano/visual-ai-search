@@ -42,7 +42,8 @@ param openaiChatDeployment string = 'gpt-4.1'
 
 @description('Search strategy shown in frontend: "all", "vision", or "openai".')
 param searchStrategy string = 'all'
-
+@description('Azure region for AI Vision. Multimodal embeddings (vectorizeImage/vectorizeText) require specific regions. See https://aka.ms/aivision-region-availability')
+param visionLocation string = 'eastus'
 // ── Derived names ──────────────────────────────────────────────────────────
 var resourceSuffix = take(uniqueString(subscription().id, environmentName, location), 6)
 var envNameLower = replace(toLower(environmentName), '_', '-')
@@ -138,7 +139,7 @@ module vision './modules/vision.bicep' = {
   scope: rg
   params: {
     name: visionAccountName
-    location: location
+    location: visionLocation
     tags: tags
     principalId: webIdentity.outputs.principalId
   }
