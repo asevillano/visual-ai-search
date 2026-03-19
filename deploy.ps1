@@ -674,6 +674,46 @@ $envVarsYaml
                 -ServiceLabel "Azure AI Vision" `
                 -RoleName "Cognitive Services User" `
                 -PrincipalId $principalId
+
+            # 7c. Azure Blob Storage — Storage Blob Data Contributor
+            Write-Host "" -ForegroundColor Gray
+            Write-Host "  --- Azure Blob Storage ---" -ForegroundColor Cyan
+            $storageAccountName = $envVars["AZURE_STORAGE_ACCOUNT_NAME"]
+            if ($storageAccountName) {
+                Write-Host "  Storage account: $storageAccountName" -ForegroundColor Gray
+
+                # Try same resource group first
+                $storageId = az storage account show `
+                    --name $storageAccountName `
+                    --resource-group $RESOURCE_GROUP `
+                    --query "id" -o tsv 2>$null
+
+                # Fall back to subscription-wide search
+                if (-not $storageId) {
+                    Write-Host "  Searching across subscription..." -ForegroundColor Gray
+                    $storageId = az resource list `
+                        --name $storageAccountName `
+                        --resource-type "Microsoft.Storage/storageAccounts" `
+                        --query "[0].id" -o tsv 2>$null
+                }
+
+                if ($storageId) {
+                    Write-Host "  Assigning 'Storage Blob Data Contributor' role..." -ForegroundColor Gray
+                    az role assignment create `
+                        --assignee-object-id $principalId `
+                        --assignee-principal-type ServicePrincipal `
+                        --role "Storage Blob Data Contributor" `
+                        --scope $storageId `
+                        --output none 2>$null
+                    Write-Host "  OK — 'Storage Blob Data Contributor' assigned to Storage" -ForegroundColor Green
+                } else {
+                    Write-Host "  WARNING: Storage account '$storageAccountName' not found." -ForegroundColor Yellow
+                    Write-Host "  Assign manually: az role assignment create --assignee-object-id $principalId --assignee-principal-type ServicePrincipal --role 'Storage Blob Data Contributor' --scope <storage-resource-id>" -ForegroundColor Gray
+                }
+            } else {
+                Write-Host "  WARNING: AZURE_STORAGE_ACCOUNT_NAME not set in .env" -ForegroundColor Yellow
+                Write-Host "  Storage RBAC not configured — container.exists() will fail." -ForegroundColor Yellow
+            }
         }
     } else {
         Write-Host "[Step 7/8] Skipped (RBAC)" -ForegroundColor Gray
