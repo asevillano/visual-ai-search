@@ -9,7 +9,7 @@ from __future__ import annotations
 import logging
 import time
 import httpx
-from azure.identity import AzureCliCredential
+from azure.identity import DefaultAzureCredential
 from app.config import get_settings
 
 logger = logging.getLogger("app.vision")
@@ -18,7 +18,7 @@ logger = logging.getLogger("app.vision")
 # Module-level state (populated once by init(), released by close())
 # ---------------------------------------------------------------------------
 
-_credential: AzureCliCredential | None = None
+_credential: DefaultAzureCredential | None = None
 _http_client: httpx.AsyncClient | None = None
 _VISION_SCOPE = "https://cognitiveservices.azure.com/.default"
 
@@ -53,8 +53,8 @@ async def init() -> None:
     _url_vectorize_image = f"{base}/computervision/retrieval:vectorizeImage"
     _url_vectorize_text  = f"{base}/computervision/retrieval:vectorizeText"
 
-    # 2. AzureCliCredential (fast — no fallback chain) + HTTP client
-    _credential = AzureCliCredential(tenant_id=settings.azure_tenant_id, process_timeout=30)
+    # 2. DefaultAzureCredential (Managed Identity in Azure, CLI locally) + HTTP client
+    _credential = DefaultAzureCredential()
     _http_client = httpx.AsyncClient(
         timeout=60,
         limits=httpx.Limits(max_connections=10, max_keepalive_connections=5),
@@ -97,8 +97,7 @@ async def close() -> None:
 def _refresh_token() -> None:
     """Fetch a new token (sync) and cache it locally.
 
-    Uses sync AzureCliCredential.get_token() which calls `az` CLI.
-    Fast (~100ms when token is cached by CLI, ~1-4s first time).
+    Uses DefaultAzureCredential (Managed Identity in Azure, CLI locally).
     Retries once on timeout / transient failures.
     """
     global _cached_token, _token_expires_on

@@ -8270,3 +8270,901 @@ For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/St
 2026-03-18 09:23:16 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
 2026-03-18 09:23:16 | INFO    | app.blob_storage             | Blob client closed
 2026-03-18 09:23:16 | INFO    | app.main                     | ===== Shutdown complete =====
+2026-03-18 09:23:56 | INFO    | app.main                     | Log file → C:\Angel\AI GBB\Demos\visual_ai_search\backend\logs\app.log
+2026-03-18 09:23:56 | INFO    | app.main                     | ===== Application starting up =====
+2026-03-18 09:23:56 | INFO    | app.blob_storage             | Blob init — account=demomovistar
+2026-03-18 09:23:58 | INFO    | app.blob_storage             | Container 'originals' already exists
+2026-03-18 09:23:58 | INFO    | app.blob_storage             | Container 'thumbnails' already exists
+2026-03-18 09:23:58 | INFO    | app.blob_storage             | Blob init OK
+2026-03-18 09:23:58 | INFO    | app.search_index             | SearchIndex init — endpoint=https://visual-ai-search.search.windows.net
+2026-03-18 09:23:58 | INFO    | app.search_index             | Creating/updating index 'visual-search-index' (15 fields, 2 vector profiles)
+2026-03-18 09:24:03 | INFO    | app.search_index             | Index 'visual-search-index' ready
+2026-03-18 09:24:03 | INFO    | app.search_index             | SearchIndex init OK
+2026-03-18 09:24:03 | INFO    | app.search                   | Search init — endpoint=https://visual-ai-search.search.windows.net, index=visual-search-index
+2026-03-18 09:24:03 | INFO    | app.search                   | Search init OK
+2026-03-18 09:24:03 | INFO    | app.upload                   | Upload init — creating sync SearchClient for upserts
+2026-03-18 09:24:03 | INFO    | app.upload                   | Upload init OK
+2026-03-18 09:24:03 | INFO    | app.documents                | Documents init — creating sync SearchClient
+2026-03-18 09:24:03 | INFO    | app.documents                | Documents init OK
+2026-03-18 09:24:03 | INFO    | app.openai_embeddings        | OpenAI init — endpoint=https://test-tool.openai.azure.com, deployment=text-embedding-3-large
+2026-03-18 09:24:16 | INFO    | app.openai_embeddings        | OpenAI init OK — token warm-up (9892 ms)
+2026-03-18 09:24:16 | INFO    | app.gpt_analysis             | GPT Analysis init — endpoint=https://test-tool.openai.azure.com, deployment=gpt-4.1
+2026-03-18 09:24:27 | INFO    | app.gpt_analysis             | GPT Analysis init OK — token warm-up (8533 ms)
+2026-03-18 09:24:27 | INFO    | app.vision                   | Vision init — endpoint=https://visual-ai-search.cognitiveservices.azure.com
+2026-03-18 09:24:40 | INFO    | app.vision                   | Vision init OK — connection warm-up 200 (390 ms)
+2026-03-18 09:24:40 | INFO    | app.main                     | ===== All services ready (43903 ms) =====
+2026-03-18 09:55:26 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:26 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:26 | INFO    | app.main                     | → GET /struts2-showcase/struts/utils.js
+2026-03-18 09:55:26 | INFO    | app.main                     | ← GET / — 404 (6 ms)
+2026-03-18 09:55:26 | INFO    | app.main                     | ← GET / — 404 (6 ms)
+2026-03-18 09:55:26 | INFO    | app.main                     | ← GET /struts2-showcase/struts/utils.js — 404 (7 ms)
+2026-03-18 09:55:26 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:26 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:26 | INFO    | app.main                     | ← GET / — 404 (5 ms)
+2026-03-18 09:55:26 | INFO    | app.main                     | ← GET / — 404 (5 ms)
+2026-03-18 09:55:27 | INFO    | app.main                     | → GET /js/
+2026-03-18 09:55:27 | INFO    | app.main                     | ← GET /js/ — 404 (2 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /struts2-showcase/struts/tooltip.gif
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /struts2-showcase/struts/tooltip.gif — 404 (3 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (4 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /struts2-showcase/struts/domtt.css
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (3 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /struts2-showcase/struts/domtt.css — 404 (4 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /struts2-showcase/struts/domTT.js
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (5 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /struts2-showcase/struts/domTT.js — 404 (4 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /struts2-showcase/struts/inputtransfersselect.js
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (6 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (7 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /struts2-showcase/struts/inputtransfersselect.js — 404 (8 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /struts2-showcase/struts/optiontransferselect.js
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (14 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (14 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (14 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /struts2-showcase/struts/optiontransferselect.js — 404 (14 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (14 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /index.action/struts/utils.js
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /struts2-showcase
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /index.action/struts/utils.js — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /struts2-showcase — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (19 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (19 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (18 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (18 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (19 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → POST /struts2-showcase/token/transfer4.action
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → POST /struts2-showcase/token/transfer4.action
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → POST /analytics/telemetry/ph/api/hyper/send
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /struts2-showcase/${jndi:dns://MDEDiscovery8f693a7b5fApacheStruts2-8000}
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (35 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (35 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (35 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← POST /struts2-showcase/token/transfer4.action — 404 (35 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (35 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (43 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (43 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← POST /struts2-showcase/token/transfer4.action — 404 (42 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (41 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (40 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (40 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (39 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (38 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (40 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (40 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← POST /analytics/telemetry/ph/api/hyper/send — 404 (40 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (39 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (39 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (38 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /struts2-showcase/${jndi:dns://MDEDiscovery8f693a7b5fApacheStruts2-8000} — 404 (35 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (24 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (24 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (24 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (24 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (27 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (27 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (26 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (26 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (25 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (25 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (25 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (24 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (24 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (21 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (21 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (20 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (20 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (19 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (19 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (22 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (21 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (21 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (26 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (26 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (25 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (25 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (25 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (24 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (23 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (20 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (20 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (19 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (19 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (18 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (18 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (18 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (18 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (16 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (19 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (18 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (18 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (17 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (16 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (16 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (8 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (7 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (7 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (7 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (12 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (12 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (14 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (15 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (13 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (13 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (13 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (13 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (8 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (8 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (8 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (7 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (12 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (12 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (11 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (11 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (11 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (10 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (10 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET /:undefined — 404 (10 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (11 ms)
+2026-03-18 09:55:28 | INFO    | app.main                     | ← GET / — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (10 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (14 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (13 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (13 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (13 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (10 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (10 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (14 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (14 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (13 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (13 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (12 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (10 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (11 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (4 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (4 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (4 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (7 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (8 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (7 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (5 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (5 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (3 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /api/v2/${jndi:dns://MDEDiscovery8f693a7b5fSeenInTheWildGet-8000}
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /api/v2/${jndi:dns://MDEDiscovery8f693a7b5fSeenInTheWildGet-8000} — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /api/
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /api/ — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /index.html
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /index.html — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /login
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /login — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → POST /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← POST / — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → POST /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← POST /:undefined — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → POST /login
+2026-03-18 09:55:29 | INFO    | app.main                     | ← POST /login — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /cgi-bin/
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /cgi-bin/ — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /JSPWiki/wiki/${jndi:dns://MDEDiscovery8f693a7b5fApacheJspWiki-8000}
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /JSPWiki/wiki/${jndi:dns://MDEDiscovery8f693a7b5fApacheJspWiki-8000} — 404 (3 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (4 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /webtools/control/main
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /webtools/control/main — 404 (4 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (3 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → POST /broker/xml
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (5 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← POST /broker/xml — 404 (4 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → POST /broker/xml
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← POST /broker/xml — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (3 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /portal/info.jsp
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (4 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /portal/info.jsp — 404 (3 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /:undefined
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /:undefined — 404 (2 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET / — 404 (1 ms)
+2026-03-18 09:55:29 | INFO    | app.main                     | → GET /cgi-bin/
+2026-03-18 09:55:29 | INFO    | app.main                     | ← GET /cgi-bin/ — 404 (2 ms)
+2026-03-18 09:55:30 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:30 | INFO    | app.main                     | ← GET / — 404 (2 ms)
+2026-03-18 09:55:30 | INFO    | app.main                     | → POST /
+2026-03-18 09:55:30 | INFO    | app.main                     | ← POST / — 404 (4 ms)
+2026-03-18 09:55:30 | INFO    | app.main                     | → POST /
+2026-03-18 09:55:30 | INFO    | app.main                     | ← POST / — 404 (3 ms)
+2026-03-18 09:55:30 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:30 | INFO    | app.main                     | ← GET / — 404 (4 ms)
+2026-03-18 09:55:30 | INFO    | app.main                     | → POST /
+2026-03-18 09:55:30 | INFO    | app.main                     | ← POST / — 404 (2 ms)
+2026-03-18 09:55:30 | INFO    | app.main                     | → GET /
+2026-03-18 09:55:30 | INFO    | app.main                     | ← GET / — 404 (3 ms)
+2026-03-18 09:55:57 | INFO    | app.main                     | → GET /api/config
+2026-03-18 09:55:57 | INFO    | app.main                     | ← GET /api/config — 200 (12 ms)
+2026-03-18 09:55:57 | INFO    | app.main                     | → GET /api/config
+2026-03-18 09:55:57 | INFO    | app.main                     | ← GET /api/config — 200 (9 ms)
+2026-03-18 09:56:01 | INFO    | app.main                     | → POST /api/search
+2026-03-18 09:56:01 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-18 09:56:01 | INFO    | app.search                   | execute_search — strategy=openai, text='yellow sign', has_image=False
+2026-03-18 09:56:01 | INFO    | app.openai_embeddings        | embed_text — 'yellow sign'
+2026-03-18 09:56:17 | INFO    | app.openai_embeddings        | embed_text OK (15389 ms) — 3072-d vector
+2026-03-18 09:56:17 | INFO    | app.search                   | _execute_search — strategy=openai, text='yellow sign', has_image=False, page=1/20
+2026-03-18 09:56:17 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=None
+2026-03-18 09:56:17 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 09:56:18 | INFO    | app.search                   |   _execute_search done (824 ms) — strategy=openai, total=19, returned=19
+2026-03-18 09:56:18 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=69.1%
+2026-03-18 09:56:18 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 09:56:18 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-18 09:56:18 | INFO    | app.main                     | ← POST /api/search — 200 (16311 ms)
+2026-03-18 09:56:24 | INFO    | app.main                     | → POST /api/search
+2026-03-18 09:56:24 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-18 09:56:24 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-18 09:56:24 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-18 09:56:24 | INFO    | app.openai_embeddings        | embed_text OK (605 ms) — 3072-d vector
+2026-03-18 09:56:24 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-18 09:56:24 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=None
+2026-03-18 09:56:24 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 09:56:25 | INFO    | app.search                   |   _execute_search done (348 ms) — strategy=openai, total=19, returned=19
+2026-03-18 09:56:25 | INFO    | app.search                   |   Top result: id=30b18e069f1c4873b2b9b5dd65ae09cb, file=mercedes-benz-clase-e-2024-exterior-1-soymotor.jpg, relevance=64.4%
+2026-03-18 09:56:25 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 09:56:25 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-18 09:56:25 | INFO    | app.main                     | ← POST /api/search — 200 (969 ms)
+2026-03-18 09:56:46 | INFO    | app.main                     | → POST /api/search
+2026-03-18 09:56:46 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=True, filters=None
+2026-03-18 09:56:46 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-18 09:56:46 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=True
+2026-03-18 09:56:46 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-18 09:56:46 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-18 09:56:46 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-18 09:56:46 | INFO    | app.vision                   | vectorize_image OK (461 ms) — 1024-d vector
+2026-03-18 09:56:46 | INFO    | app.openai_embeddings        | embed_text OK (547 ms) — 3072-d vector
+2026-03-18 09:56:46 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=True, page=1/20
+2026-03-18 09:56:46 | INFO    | app.search                   |   vector_queries=2, search_text='car', filter=None
+2026-03-18 09:56:46 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=3
+2026-03-18 09:56:47 | INFO    | app.search                   |   _execute_search done (705 ms) — strategy=openai, total=19, returned=19
+2026-03-18 09:56:47 | INFO    | app.search                   |   Top result: id=30b18e069f1c4873b2b9b5dd65ae09cb, file=mercedes-benz-clase-e-2024-exterior-1-soymotor.jpg, relevance=64.4%
+2026-03-18 09:56:47 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 09:56:47 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-18 09:56:47 | INFO    | app.main                     | ← POST /api/search — 200 (1542 ms)
+2026-03-18 09:56:53 | INFO    | app.main                     | → POST /api/search
+2026-03-18 09:56:53 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters=None
+2026-03-18 09:56:53 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-18 09:56:53 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-18 09:56:53 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-18 09:56:53 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-18 09:56:53 | INFO    | app.vision                   | vectorize_image OK (317 ms) — 1024-d vector
+2026-03-18 09:56:53 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-18 09:56:53 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-18 09:56:53 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-18 09:56:53 | INFO    | app.search                   |   _execute_search done (173 ms) — strategy=openai, total=19, returned=19
+2026-03-18 09:56:53 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-18 09:56:53 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 09:56:53 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-18 09:56:53 | INFO    | app.main                     | ← POST /api/search — 200 (518 ms)
+2026-03-18 10:09:51 | INFO    | app.main                     | → GET /api/documents
+2026-03-18 10:09:51 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-18 10:09:55 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-18 10:09:55 | INFO    | app.main                     | ← GET /api/documents — 200 (4016 ms)
+2026-03-18 10:09:55 | INFO    | app.main                     | → GET /api/documents
+2026-03-18 10:09:55 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-18 10:09:55 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-18 10:09:55 | INFO    | app.main                     | ← GET /api/documents — 200 (167 ms)
+2026-03-18 10:10:26 | INFO    | app.main                     | → GET /api/config
+2026-03-18 10:10:26 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-18 10:10:26 | INFO    | app.main                     | → GET /api/config
+2026-03-18 10:10:26 | INFO    | app.main                     | ← GET /api/config — 200 (3 ms)
+2026-03-18 10:10:32 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:10:32 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-18 10:10:32 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-18 10:10:32 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-18 10:10:32 | INFO    | app.openai_embeddings        | embed_text OK (543 ms) — 3072-d vector
+2026-03-18 10:10:32 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-18 10:10:32 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=None
+2026-03-18 10:10:32 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 10:10:33 | INFO    | app.search                   |   _execute_search done (722 ms) — strategy=openai, total=19, returned=19
+2026-03-18 10:10:33 | INFO    | app.search                   |   Top result: id=30b18e069f1c4873b2b9b5dd65ae09cb, file=mercedes-benz-clase-e-2024-exterior-1-soymotor.jpg, relevance=64.4%
+2026-03-18 10:10:33 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:10:33 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-18 10:10:33 | INFO    | app.main                     | ← POST /api/search — 200 (1286 ms)
+2026-03-18 10:10:43 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:10:43 | INFO    | app.search_router            | Search request — text='car', strategy=openai, page=1/20, has_image=False, filters={"objects":["concrete floor"]}
+2026-03-18 10:10:43 | INFO    | app.search_router            |   Parsed filters: {'objects': ['concrete floor']}
+2026-03-18 10:10:43 | INFO    | app.search                   | execute_search — strategy=openai, text='car', has_image=False
+2026-03-18 10:10:43 | INFO    | app.openai_embeddings        | embed_text — 'car'
+2026-03-18 10:10:43 | INFO    | app.openai_embeddings        | embed_text OK (542 ms) — 3072-d vector
+2026-03-18 10:10:43 | INFO    | app.search                   | _execute_search — strategy=openai, text='car', has_image=False, page=1/20
+2026-03-18 10:10:43 | INFO    | app.search                   |   vector_queries=1, search_text='car', filter=(objects/any(t: t eq 'concrete floor'))
+2026-03-18 10:10:43 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 10:10:44 | INFO    | app.search                   |   _execute_search done (407 ms) — strategy=openai, total=2, returned=2
+2026-03-18 10:10:44 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=62.2%
+2026-03-18 10:10:44 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:10:44 | INFO    | app.search_router            |     OpenAI: 2 results (total=2)
+2026-03-18 10:10:44 | INFO    | app.main                     | ← POST /api/search — 200 (968 ms)
+2026-03-18 10:10:58 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:10:58 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters={"objects":["concrete floor"]}
+2026-03-18 10:10:58 | INFO    | app.search_router            |   Parsed filters: {'objects': ['concrete floor']}
+2026-03-18 10:10:58 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-18 10:10:58 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-18 10:10:58 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-18 10:10:58 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-18 10:10:59 | INFO    | app.vision                   | vectorize_image OK (357 ms) — 1024-d vector
+2026-03-18 10:10:59 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-18 10:10:59 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=(objects/any(t: t eq 'concrete floor'))
+2026-03-18 10:10:59 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-18 10:10:59 | INFO    | app.search                   |   _execute_search done (535 ms) — strategy=openai, total=2, returned=2
+2026-03-18 10:10:59 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-18 10:10:59 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:10:59 | INFO    | app.search_router            |     OpenAI: 2 results (total=2)
+2026-03-18 10:10:59 | INFO    | app.main                     | ← POST /api/search — 200 (956 ms)
+2026-03-18 10:11:02 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:11:02 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters={"objects":["concrete floor"]}
+2026-03-18 10:11:02 | INFO    | app.search_router            |   Parsed filters: {'objects': ['concrete floor']}
+2026-03-18 10:11:02 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-18 10:11:02 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-18 10:11:02 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-18 10:11:02 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-18 10:11:03 | INFO    | app.vision                   | vectorize_image OK (126 ms) — 1024-d vector
+2026-03-18 10:11:03 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-18 10:11:03 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=(objects/any(t: t eq 'concrete floor'))
+2026-03-18 10:11:03 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-18 10:11:03 | INFO    | app.search                   |   _execute_search done (206 ms) — strategy=openai, total=2, returned=2
+2026-03-18 10:11:03 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-18 10:11:03 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:11:03 | INFO    | app.search_router            |     OpenAI: 2 results (total=2)
+2026-03-18 10:11:03 | INFO    | app.main                     | ← POST /api/search — 200 (419 ms)
+2026-03-18 10:11:08 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:11:08 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters=None
+2026-03-18 10:11:08 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-18 10:11:08 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-18 10:11:08 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-18 10:11:08 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-18 10:11:09 | INFO    | app.vision                   | vectorize_image OK (318 ms) — 1024-d vector
+2026-03-18 10:11:09 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-18 10:11:09 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-18 10:11:09 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-18 10:11:09 | INFO    | app.search                   |   _execute_search done (170 ms) — strategy=openai, total=19, returned=19
+2026-03-18 10:11:09 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-18 10:11:09 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:11:09 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-18 10:11:09 | INFO    | app.main                     | ← POST /api/search — 200 (529 ms)
+2026-03-18 10:22:57 | INFO    | app.main                     | → GET /api/config
+2026-03-18 10:22:57 | INFO    | app.main                     | ← GET /api/config — 200 (4 ms)
+2026-03-18 10:22:57 | INFO    | app.main                     | → GET /api/config
+2026-03-18 10:22:57 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-18 10:23:27 | INFO    | app.main                     | → GET /api/documents
+2026-03-18 10:23:27 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-18 10:23:30 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-18 10:23:30 | INFO    | app.main                     | ← GET /api/documents — 200 (2836 ms)
+2026-03-18 10:23:30 | INFO    | app.main                     | → GET /api/documents
+2026-03-18 10:23:30 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-18 10:23:30 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-18 10:23:30 | INFO    | app.main                     | ← GET /api/documents — 200 (155 ms)
+2026-03-18 10:28:48 | INFO    | app.main                     | → GET /api/config
+2026-03-18 10:28:48 | INFO    | app.main                     | ← GET /api/config — 200 (5 ms)
+2026-03-18 10:28:48 | INFO    | app.main                     | → GET /api/config
+2026-03-18 10:28:48 | INFO    | app.main                     | ← GET /api/config — 200 (4 ms)
+2026-03-18 10:28:53 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:28:53 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=openai, page=1/20, has_image=False, filters=None
+2026-03-18 10:28:53 | INFO    | app.search                   | execute_search — strategy=openai, text='yellow sign', has_image=False
+2026-03-18 10:28:53 | INFO    | app.openai_embeddings        | embed_text — 'yellow sign'
+2026-03-18 10:28:54 | INFO    | app.openai_embeddings        | embed_text OK (567 ms) — 3072-d vector
+2026-03-18 10:28:54 | INFO    | app.search                   | _execute_search — strategy=openai, text='yellow sign', has_image=False, page=1/20
+2026-03-18 10:28:54 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=None
+2026-03-18 10:28:54 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 10:28:54 | INFO    | app.search                   |   _execute_search done (879 ms) — strategy=openai, total=19, returned=19
+2026-03-18 10:28:55 | INFO    | app.search                   |   Top result: id=c9b79399e4cc4b2db69b50d8827f83ae, file=bob-osias-qxnKmvB07wU-unsplash.jpg, relevance=69.1%
+2026-03-18 10:28:55 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:28:55 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-18 10:28:55 | INFO    | app.main                     | ← POST /api/search — 200 (1503 ms)
+2026-03-18 10:29:14 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:29:14 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=openai, page=1/20, has_image=False, filters={"objects":["headlights"]}
+2026-03-18 10:29:14 | INFO    | app.search_router            |   Parsed filters: {'objects': ['headlights']}
+2026-03-18 10:29:14 | INFO    | app.search                   | execute_search — strategy=openai, text='yellow sign', has_image=False
+2026-03-18 10:29:14 | INFO    | app.openai_embeddings        | embed_text — 'yellow sign'
+2026-03-18 10:29:14 | INFO    | app.openai_embeddings        | embed_text OK (655 ms) — 3072-d vector
+2026-03-18 10:29:14 | INFO    | app.search                   | _execute_search — strategy=openai, text='yellow sign', has_image=False, page=1/20
+2026-03-18 10:29:14 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=(objects/any(t: t eq 'headlights'))
+2026-03-18 10:29:14 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 10:29:15 | INFO    | app.search                   |   _execute_search done (682 ms) — strategy=openai, total=2, returned=2
+2026-03-18 10:29:15 | INFO    | app.search                   |   Top result: id=f31ca229e82c418e91354a1ad3a2cf7d, file=img-1678369190-b83ed27a1e91.jpg, relevance=26.5%
+2026-03-18 10:29:15 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:29:15 | INFO    | app.search_router            |     OpenAI: 2 results (total=2)
+2026-03-18 10:29:15 | INFO    | app.main                     | ← POST /api/search — 200 (1377 ms)
+2026-03-18 10:29:15 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:29:15 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=openai, page=1/20, has_image=False, filters={"objects":["headlights","side mirrors"]}
+2026-03-18 10:29:15 | INFO    | app.search_router            |   Parsed filters: {'objects': ['headlights', 'side mirrors']}
+2026-03-18 10:29:15 | INFO    | app.search                   | execute_search — strategy=openai, text='yellow sign', has_image=False
+2026-03-18 10:29:15 | INFO    | app.openai_embeddings        | embed_text — 'yellow sign'
+2026-03-18 10:29:17 | INFO    | app.openai_embeddings        | embed_text OK (1513 ms) — 3072-d vector
+2026-03-18 10:29:17 | INFO    | app.search                   | _execute_search — strategy=openai, text='yellow sign', has_image=False, page=1/20
+2026-03-18 10:29:17 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=(objects/any(t: t eq 'headlights') or objects/any(t: t eq 'side mirrors'))
+2026-03-18 10:29:17 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 10:29:17 | INFO    | app.search                   |   _execute_search done (397 ms) — strategy=openai, total=3, returned=3
+2026-03-18 10:29:17 | INFO    | app.search                   |   Top result: id=f31ca229e82c418e91354a1ad3a2cf7d, file=img-1678369190-b83ed27a1e91.jpg, relevance=26.5%
+2026-03-18 10:29:17 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:29:17 | INFO    | app.search_router            |     OpenAI: 3 results (total=3)
+2026-03-18 10:29:17 | INFO    | app.main                     | ← POST /api/search — 200 (1961 ms)
+2026-03-18 10:29:17 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:29:18 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=openai, page=1/20, has_image=False, filters={"objects":["headlights","side mirrors","parking lot"]}
+2026-03-18 10:29:18 | INFO    | app.search_router            |   Parsed filters: {'objects': ['headlights', 'side mirrors', 'parking lot']}
+2026-03-18 10:29:18 | INFO    | app.search                   | execute_search — strategy=openai, text='yellow sign', has_image=False
+2026-03-18 10:29:18 | INFO    | app.openai_embeddings        | embed_text — 'yellow sign'
+2026-03-18 10:29:18 | INFO    | app.openai_embeddings        | embed_text OK (210 ms) — 3072-d vector
+2026-03-18 10:29:18 | INFO    | app.search                   | _execute_search — strategy=openai, text='yellow sign', has_image=False, page=1/20
+2026-03-18 10:29:18 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=(objects/any(t: t eq 'headlights') or objects/any(t: t eq 'side mirrors') or objects/any(t: t eq 'parking lot'))
+2026-03-18 10:29:18 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 10:29:18 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:29:18 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=openai, page=1/20, has_image=False, filters={"objects":["headlights","side mirrors"]}
+2026-03-18 10:29:18 | INFO    | app.search_router            |   Parsed filters: {'objects': ['headlights', 'side mirrors']}
+2026-03-18 10:29:18 | INFO    | app.search                   | execute_search — strategy=openai, text='yellow sign', has_image=False
+2026-03-18 10:29:18 | INFO    | app.openai_embeddings        | embed_text — 'yellow sign'
+2026-03-18 10:29:18 | INFO    | app.search                   |   _execute_search done (762 ms) — strategy=openai, total=3, returned=3
+2026-03-18 10:29:18 | INFO    | app.search                   |   Top result: id=f31ca229e82c418e91354a1ad3a2cf7d, file=img-1678369190-b83ed27a1e91.jpg, relevance=26.5%
+2026-03-18 10:29:18 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:29:19 | INFO    | app.search_router            |     OpenAI: 3 results (total=3)
+2026-03-18 10:29:19 | INFO    | app.main                     | ← POST /api/search — 200 (1018 ms)
+2026-03-18 10:29:19 | INFO    | app.openai_embeddings        | embed_text OK (306 ms) — 3072-d vector
+2026-03-18 10:29:19 | INFO    | app.search                   | _execute_search — strategy=openai, text='yellow sign', has_image=False, page=1/20
+2026-03-18 10:29:19 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=(objects/any(t: t eq 'headlights') or objects/any(t: t eq 'side mirrors'))
+2026-03-18 10:29:19 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 10:29:19 | INFO    | app.search                   |   _execute_search done (408 ms) — strategy=openai, total=3, returned=3
+2026-03-18 10:29:19 | INFO    | app.search                   |   Top result: id=f31ca229e82c418e91354a1ad3a2cf7d, file=img-1678369190-b83ed27a1e91.jpg, relevance=26.5%
+2026-03-18 10:29:19 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:29:19 | INFO    | app.search_router            |     OpenAI: 3 results (total=3)
+2026-03-18 10:29:19 | INFO    | app.main                     | ← POST /api/search — 200 (820 ms)
+2026-03-18 10:29:21 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:29:21 | INFO    | app.search_router            | Search request — text='yellow sign', strategy=openai, page=1/20, has_image=False, filters={"objects":["headlights","side mirrors"]}
+2026-03-18 10:29:21 | INFO    | app.search_router            |   Parsed filters: {'objects': ['headlights', 'side mirrors']}
+2026-03-18 10:29:21 | INFO    | app.search                   | execute_search — strategy=openai, text='yellow sign', has_image=False
+2026-03-18 10:29:21 | INFO    | app.openai_embeddings        | embed_text — 'yellow sign'
+2026-03-18 10:29:21 | INFO    | app.openai_embeddings        | embed_text OK (255 ms) — 3072-d vector
+2026-03-18 10:29:21 | INFO    | app.search                   | _execute_search — strategy=openai, text='yellow sign', has_image=False, page=1/20
+2026-03-18 10:29:21 | INFO    | app.search                   |   vector_queries=1, search_text='yellow sign', filter=(objects/any(t: t eq 'headlights') or objects/any(t: t eq 'side mirrors'))
+2026-03-18 10:29:21 | INFO    | app.search                   |   scoring: mode=hybrid, retrievers=2
+2026-03-18 10:29:22 | INFO    | app.search                   |   _execute_search done (414 ms) — strategy=openai, total=3, returned=3
+2026-03-18 10:29:22 | INFO    | app.search                   |   Top result: id=f31ca229e82c418e91354a1ad3a2cf7d, file=img-1678369190-b83ed27a1e91.jpg, relevance=26.5%
+2026-03-18 10:29:22 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:29:22 | INFO    | app.search_router            |     OpenAI: 3 results (total=3)
+2026-03-18 10:29:22 | INFO    | app.main                     | ← POST /api/search — 200 (720 ms)
+2026-03-18 10:29:25 | INFO    | app.main                     | → GET /api/documents
+2026-03-18 10:29:25 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-18 10:29:28 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-18 10:29:28 | INFO    | app.main                     | ← GET /api/documents — 200 (3017 ms)
+2026-03-18 10:29:28 | INFO    | app.main                     | → GET /api/documents
+2026-03-18 10:29:28 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-18 10:29:28 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-18 10:29:28 | INFO    | app.main                     | ← GET /api/documents — 200 (186 ms)
+2026-03-18 10:55:08 | INFO    | app.main                     | → GET /api/config
+2026-03-18 10:55:08 | INFO    | app.main                     | ← GET /api/config — 200 (3 ms)
+2026-03-18 10:55:08 | INFO    | app.main                     | → GET /api/config
+2026-03-18 10:55:08 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-18 10:55:13 | INFO    | app.main                     | → POST /api/search
+2026-03-18 10:55:13 | INFO    | app.search_router            | Search request — text=None, strategy=openai, page=1/20, has_image=True, filters=None
+2026-03-18 10:55:13 | INFO    | app.search_router            |   Image file: crash.jpg (57435 bytes)
+2026-03-18 10:55:13 | INFO    | app.search                   | execute_search — strategy=openai, text=None, has_image=True
+2026-03-18 10:55:13 | INFO    | app.search                   |   Image resized for vectorization: 57435 → 15304 bytes
+2026-03-18 10:55:13 | INFO    | app.vision                   | vectorize_image — 15304 bytes
+2026-03-18 10:55:23 | INFO    | app.vision                   | vectorize_image OK (10634 ms) — 1024-d vector
+2026-03-18 10:55:23 | INFO    | app.search                   | _execute_search — strategy=openai, text=None, has_image=True, page=1/20
+2026-03-18 10:55:23 | INFO    | app.search                   |   vector_queries=1, search_text=None, filter=None
+2026-03-18 10:55:23 | INFO    | app.search                   |   scoring: mode=vector, retrievers=1
+2026-03-18 10:55:24 | INFO    | app.search                   |   _execute_search done (376 ms) — strategy=openai, total=19, returned=19
+2026-03-18 10:55:24 | INFO    | app.search                   |   Top result: id=d01e92f0f8fc4eebb25c1f236e5dca43, file=697627-big.jpg, relevance=84.9%
+2026-03-18 10:55:24 | INFO    | app.search_router            |   Search complete — mode=single
+2026-03-18 10:55:24 | INFO    | app.search_router            |     OpenAI: 19 results (total=19)
+2026-03-18 10:55:24 | INFO    | app.main                     | ← POST /api/search — 200 (11026 ms)
+2026-03-18 11:34:26 | INFO    | app.main                     | ===== Application shutting down =====
+2026-03-18 11:34:26 | INFO    | app.vision                   | Vision resources closed
+2026-03-18 11:34:26 | INFO    | app.search                   | Search client closed
+2026-03-18 11:34:26 | INFO    | app.openai_embeddings        | OpenAI resources closed
+2026-03-18 11:34:26 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
+2026-03-18 11:34:26 | INFO    | app.blob_storage             | Blob client closed
+2026-03-18 11:34:26 | INFO    | app.main                     | ===== Shutdown complete =====
+2026-03-18 11:59:40 | INFO    | app.main                     | Log file → C:\Angel\AI GBB\Demos\visual_ai_search\backend\logs\app.log
+2026-03-18 11:59:40 | INFO    | app.main                     | ===== Application starting up =====
+2026-03-18 11:59:40 | INFO    | app.blob_storage             | Blob init — account=demomovistar
+2026-03-18 11:59:42 | INFO    | app.blob_storage             | Container 'originals' already exists
+2026-03-18 11:59:42 | INFO    | app.blob_storage             | Container 'thumbnails' already exists
+2026-03-18 11:59:42 | INFO    | app.blob_storage             | Blob init OK
+2026-03-18 11:59:42 | INFO    | app.search_index             | SearchIndex init — endpoint=https://visual-ai-search.search.windows.net
+2026-03-18 11:59:42 | INFO    | app.search_index             | Creating/updating index 'visual-search-index' (15 fields, 2 vector profiles)
+2026-03-18 11:59:43 | INFO    | app.search_index             | Index 'visual-search-index' ready
+2026-03-18 11:59:43 | INFO    | app.search_index             | SearchIndex init OK
+2026-03-18 11:59:43 | INFO    | app.search                   | Search init — endpoint=https://visual-ai-search.search.windows.net, index=visual-search-index
+2026-03-18 11:59:43 | INFO    | app.search                   | Search init OK
+2026-03-18 11:59:43 | INFO    | app.upload                   | Upload init — creating sync SearchClient for upserts
+2026-03-18 11:59:43 | INFO    | app.upload                   | Upload init OK
+2026-03-18 11:59:43 | INFO    | app.documents                | Documents init — creating sync SearchClient
+2026-03-18 11:59:43 | INFO    | app.documents                | Documents init OK
+2026-03-18 11:59:43 | INFO    | app.openai_embeddings        | OpenAI init — endpoint=https://test-tool.openai.azure.com, deployment=text-embedding-3-large
+2026-03-18 11:59:48 | INFO    | app.openai_embeddings        | OpenAI init OK — token warm-up (4185 ms)
+2026-03-18 11:59:48 | INFO    | app.gpt_analysis             | GPT Analysis init — endpoint=https://test-tool.openai.azure.com, deployment=gpt-4.1
+2026-03-18 11:59:52 | INFO    | app.gpt_analysis             | GPT Analysis init OK — token warm-up (3033 ms)
+2026-03-18 11:59:52 | INFO    | app.vision                   | Vision init — endpoint=https://visual-ai-search.cognitiveservices.azure.com
+2026-03-18 11:59:56 | INFO    | app.vision                   | Vision init OK — connection warm-up 200 (260 ms)
+2026-03-18 11:59:56 | INFO    | app.main                     | ===== All services ready (15974 ms) =====
+2026-03-18 12:00:01 | INFO    | app.main                     | → GET /api/config
+2026-03-18 12:00:01 | INFO    | app.main                     | ← GET /api/config — 200 (5 ms)
+2026-03-18 12:00:01 | INFO    | app.main                     | → GET /api/config
+2026-03-18 12:00:01 | INFO    | app.main                     | ← GET /api/config — 200 (2 ms)
+2026-03-18 12:00:03 | INFO    | app.main                     | → GET /api/documents
+2026-03-18 12:00:03 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-18 12:00:04 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-18 12:00:04 | INFO    | app.main                     | ← GET /api/documents — 200 (887 ms)
+2026-03-18 12:00:04 | INFO    | app.main                     | → GET /api/documents
+2026-03-18 12:00:04 | INFO    | app.documents                | list_documents — page=1, page_size=20
+2026-03-18 12:00:04 | INFO    | app.documents                | list_documents OK — total=19, returned=19
+2026-03-18 12:00:04 | INFO    | app.main                     | ← GET /api/documents — 200 (97 ms)
+2026-03-18 12:32:17 | INFO    | app.main                     | Log file → C:\Angel\AI GBB\Demos\visual_ai_search\backend\logs\app.log
+2026-03-18 12:32:17 | INFO    | app.main                     | ===== Application starting up =====
+2026-03-18 12:32:17 | INFO    | app.blob_storage             | Blob init — account=demomovistar
+2026-03-18 12:32:18 | INFO    | app.blob_storage             | Container 'originals' already exists
+2026-03-18 12:32:18 | INFO    | app.blob_storage             | Container 'thumbnails' already exists
+2026-03-18 12:32:18 | INFO    | app.blob_storage             | Blob init OK
+2026-03-18 12:32:18 | INFO    | app.search_index             | SearchIndex init — endpoint=https://visual-ai-search.search.windows.net
+2026-03-18 12:32:18 | INFO    | app.search_index             | Creating/updating index 'visual-search-index' (15 fields, 2 vector profiles)
+2026-03-18 12:32:19 | INFO    | app.search_index             | Index 'visual-search-index' ready
+2026-03-18 12:32:19 | INFO    | app.search_index             | SearchIndex init OK
+2026-03-18 12:32:19 | INFO    | app.search                   | Search init — endpoint=https://visual-ai-search.search.windows.net, index=visual-search-index
+2026-03-18 12:32:19 | INFO    | app.search                   | Search init OK
+2026-03-18 12:32:19 | INFO    | app.upload                   | Upload init — creating sync SearchClient for upserts
+2026-03-18 12:32:19 | INFO    | app.upload                   | Upload init OK
+2026-03-18 12:32:19 | INFO    | app.documents                | Documents init — creating sync SearchClient
+2026-03-18 12:32:19 | INFO    | app.documents                | Documents init OK
+2026-03-18 12:32:19 | INFO    | app.openai_embeddings        | OpenAI init — endpoint=https://test-tool.openai.azure.com, deployment=text-embedding-3-large
+2026-03-18 12:32:26 | INFO    | app.openai_embeddings        | OpenAI init OK — token warm-up (6780 ms)
+2026-03-18 12:32:26 | INFO    | app.gpt_analysis             | GPT Analysis init — endpoint=https://test-tool.openai.azure.com, deployment=gpt-4.1
+2026-03-18 12:32:31 | INFO    | app.gpt_analysis             | GPT Analysis init OK — token warm-up (3512 ms)
+2026-03-18 12:32:31 | INFO    | app.vision                   | Vision init — endpoint=https://visual-ai-search.cognitiveservices.azure.com
+2026-03-18 12:32:35 | INFO    | app.vision                   | Vision init OK — connection warm-up 200 (258 ms)
+2026-03-18 12:32:35 | INFO    | app.main                     | ===== All services ready (17291 ms) =====
+2026-03-18 12:32:49 | INFO    | app.main                     | ===== Application shutting down =====
+2026-03-18 12:32:49 | INFO    | app.vision                   | Vision resources closed
+2026-03-18 12:32:49 | INFO    | app.search                   | Search client closed
+2026-03-18 12:32:49 | INFO    | app.openai_embeddings        | OpenAI resources closed
+2026-03-18 12:32:49 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
+2026-03-18 12:32:49 | INFO    | app.blob_storage             | Blob client closed
+2026-03-18 12:32:49 | INFO    | app.main                     | ===== Shutdown complete =====
+2026-03-18 12:33:31 | INFO    | app.main                     | ===== Application shutting down =====
+2026-03-18 12:33:31 | INFO    | app.vision                   | Vision resources closed
+2026-03-18 12:33:31 | INFO    | app.search                   | Search client closed
+2026-03-18 12:33:31 | INFO    | app.openai_embeddings        | OpenAI resources closed
+2026-03-18 12:33:31 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
+2026-03-18 12:33:31 | INFO    | app.blob_storage             | Blob client closed
+2026-03-18 12:33:31 | INFO    | app.main                     | ===== Shutdown complete =====
+2026-03-18 12:38:17 | INFO    | app.main                     | Log file → C:\Angel\AI GBB\Demos\visual_ai_search\backend\logs\app.log
+2026-03-18 12:38:17 | INFO    | app.main                     | ===== Application starting up =====
+2026-03-18 12:38:17 | INFO    | app.blob_storage             | Blob init — account=demomovistar
+2026-03-18 12:38:18 | INFO    | app.blob_storage             | Container 'originals' already exists
+2026-03-18 12:38:18 | INFO    | app.blob_storage             | Container 'thumbnails' already exists
+2026-03-18 12:38:18 | INFO    | app.blob_storage             | Blob init OK
+2026-03-18 12:38:18 | INFO    | app.search_index             | SearchIndex init — endpoint=https://visual-ai-search.search.windows.net
+2026-03-18 12:38:18 | INFO    | app.search_index             | Creating/updating index 'visual-search-index' (15 fields, 2 vector profiles)
+2026-03-18 12:38:19 | INFO    | app.search_index             | Index 'visual-search-index' ready
+2026-03-18 12:38:19 | INFO    | app.search_index             | SearchIndex init OK
+2026-03-18 12:38:19 | INFO    | app.search                   | Search init — endpoint=https://visual-ai-search.search.windows.net, index=visual-search-index
+2026-03-18 12:38:19 | INFO    | app.search                   | Search init OK
+2026-03-18 12:38:19 | INFO    | app.upload                   | Upload init — creating sync SearchClient for upserts
+2026-03-18 12:38:19 | INFO    | app.upload                   | Upload init OK
+2026-03-18 12:38:19 | INFO    | app.documents                | Documents init — creating sync SearchClient
+2026-03-18 12:38:19 | INFO    | app.documents                | Documents init OK
+2026-03-18 12:38:19 | INFO    | app.openai_embeddings        | OpenAI init — endpoint=https://test-tool.openai.azure.com, deployment=text-embedding-3-large
+2026-03-18 12:38:22 | INFO    | app.openai_embeddings        | OpenAI init OK — token warm-up (3197 ms)
+2026-03-18 12:38:22 | INFO    | app.gpt_analysis             | GPT Analysis init — endpoint=https://test-tool.openai.azure.com, deployment=gpt-4.1
+2026-03-18 12:38:26 | INFO    | app.gpt_analysis             | GPT Analysis init OK — token warm-up (2973 ms)
+2026-03-18 12:38:26 | INFO    | app.vision                   | Vision init — endpoint=https://visual-ai-search.cognitiveservices.azure.com
+2026-03-18 12:38:29 | INFO    | app.vision                   | Vision init OK — connection warm-up 200 (276 ms)
+2026-03-18 12:38:29 | INFO    | app.main                     | ===== All services ready (12595 ms) =====
+2026-03-18 12:39:11 | INFO    | app.main                     | ===== Application shutting down =====
+2026-03-18 12:39:11 | INFO    | app.vision                   | Vision resources closed
+2026-03-18 12:39:11 | INFO    | app.search                   | Search client closed
+2026-03-18 12:39:11 | INFO    | app.openai_embeddings        | OpenAI resources closed
+2026-03-18 12:39:11 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
+2026-03-18 12:39:11 | INFO    | app.blob_storage             | Blob client closed
+2026-03-18 12:39:11 | INFO    | app.main                     | ===== Shutdown complete =====
+2026-03-18 12:39:46 | INFO    | app.main                     | Log file → C:\Angel\AI GBB\Demos\visual_ai_search\backend\logs\app.log
+2026-03-18 12:39:46 | INFO    | app.main                     | ===== Application starting up =====
+2026-03-18 12:39:46 | INFO    | app.blob_storage             | Blob init — account=demomovistar
+2026-03-18 12:39:47 | INFO    | app.blob_storage             | Container 'originals' already exists
+2026-03-18 12:39:47 | INFO    | app.blob_storage             | Container 'thumbnails' already exists
+2026-03-18 12:39:47 | INFO    | app.blob_storage             | Blob init OK
+2026-03-18 12:39:47 | INFO    | app.search_index             | SearchIndex init — endpoint=https://visual-ai-search.search.windows.net
+2026-03-18 12:39:47 | INFO    | app.search_index             | Creating/updating index 'visual-search-index' (15 fields, 2 vector profiles)
+2026-03-18 12:39:48 | INFO    | app.search_index             | Index 'visual-search-index' ready
+2026-03-18 12:39:48 | INFO    | app.search_index             | SearchIndex init OK
+2026-03-18 12:39:48 | INFO    | app.search                   | Search init — endpoint=https://visual-ai-search.search.windows.net, index=visual-search-index
+2026-03-18 12:39:48 | INFO    | app.search                   | Search init OK
+2026-03-18 12:39:48 | INFO    | app.upload                   | Upload init — creating sync SearchClient for upserts
+2026-03-18 12:39:48 | INFO    | app.upload                   | Upload init OK
+2026-03-18 12:39:48 | INFO    | app.documents                | Documents init — creating sync SearchClient
+2026-03-18 12:39:48 | INFO    | app.documents                | Documents init OK
+2026-03-18 12:39:48 | INFO    | app.openai_embeddings        | OpenAI init — endpoint=https://test-tool.openai.azure.com, deployment=text-embedding-3-large
+2026-03-18 12:39:53 | INFO    | app.openai_embeddings        | OpenAI init OK — token warm-up (3934 ms)
+2026-03-18 12:39:53 | INFO    | app.gpt_analysis             | GPT Analysis init — endpoint=https://test-tool.openai.azure.com, deployment=gpt-4.1
+2026-03-18 12:39:56 | INFO    | app.gpt_analysis             | GPT Analysis init OK — token warm-up (2421 ms)
+2026-03-18 12:39:56 | INFO    | app.vision                   | Vision init — endpoint=https://visual-ai-search.cognitiveservices.azure.com
+2026-03-18 12:40:00 | INFO    | app.vision                   | Vision init OK — connection warm-up 200 (239 ms)
+2026-03-18 12:40:00 | INFO    | app.main                     | ===== All services ready (13839 ms) =====
+2026-03-18 16:25:09 | INFO    | app.main                     | ===== Application shutting down =====
+2026-03-18 16:25:09 | INFO    | app.vision                   | Vision resources closed
+2026-03-18 16:25:09 | INFO    | app.search                   | Search client closed
+2026-03-18 16:25:09 | INFO    | app.openai_embeddings        | OpenAI resources closed
+2026-03-18 16:25:09 | INFO    | app.gpt_analysis             | GPT Analysis resources closed
+2026-03-18 16:25:09 | INFO    | app.blob_storage             | Blob client closed
+2026-03-18 16:25:09 | INFO    | app.main                     | ===== Shutdown complete =====

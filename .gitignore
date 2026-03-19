@@ -28,3 +28,4 @@ containerapp-config.yaml
 OLD/
 backend/logs/
 .gitignore
+*.bat

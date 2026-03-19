@@ -20,8 +20,7 @@ $DOCKERFILE          = "Dockerfile"
 
 # Environment variables that contain secrets (will be stored as Container Apps secrets)
 $SECRET_VARS = @(
-    "AZURE_SEARCH_API_KEY",
-    "AZURE_STORAGE_CONNECTION_STRING"
+    "AZURE_SEARCH_API_KEY"
 )
 
 # =============================================================================
@@ -83,7 +82,7 @@ function Show-EnvValidation {
         "AZURE_SEARCH_ENDPOINT", "AZURE_SEARCH_API_KEY", "AZURE_SEARCH_INDEX_NAME",
         "AZURE_VISION_ENDPOINT",
         "AZURE_OPENAI_ENDPOINT", "AZURE_OPENAI_EMBEDDING_DEPLOYMENT",
-        "AZURE_STORAGE_CONNECTION_STRING"
+        "AZURE_STORAGE_ACCOUNT_NAME"
     )
 
     foreach ($key in $requiredKeys) {

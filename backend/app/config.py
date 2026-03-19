@@ -26,8 +26,9 @@ class Settings(BaseSettings):
     azure_openai_embedding_deployment: str = "text-embedding-3-large"
     azure_openai_chat_deployment: str = "gpt-4.1"
 
-    # Azure Blob Storage
-    azure_storage_connection_string: str = ""
+    # Azure Blob Storage (Managed Identity auth — account name only)
+    azure_storage_account_name: str = ""
+    azure_storage_connection_string: str = ""  # legacy fallback for local dev
     azure_storage_container_originals: str = "originals"
     azure_storage_container_thumbnails: str = "thumbnails"
 

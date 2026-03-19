@@ -284,7 +284,7 @@ visual_ai_search/
 │   │   │   ├── gpt_analysis.py       # ★ GPT-4.1 Vision — customizable prompt + token warm-up
 │   │   │   ├── search.py             # Query execution (hybrid + semantic ranking)
 │   │   │   ├── search_index.py       # Index schema + Semantic Configuration
-│   │   │   └── blob_storage.py       # Blob upload + SAS URL refresh
+│   │   │   └── blob_storage.py       # Blob upload + SAS (Managed Identity / User Delegation Key)
 │   │   └── utils/
 │   │       ├── helpers.py             # ID generation, text representation
 │   │       └── thumbnails.py          # Thumbnail + resize for vectorization
@@ -324,9 +324,20 @@ visual_ai_search/
 │   └── jpg-signs/
 ├── .env.example                       # Template — copy to .env
 ├── .env                               # ← Your credentials (not committed)
+├── azure.yaml                         # azd service definition
+├── infra/                             # Bicep templates for azd
+│   ├── main.bicep                     # Entry point — all Azure resources
+│   ├── main.parameters.json           # Default parameters
+│   └── modules/                       # Per-service Bicep modules
+│       ├── openai.bicep               # Azure OpenAI + model deployments + RBAC
+│       ├── search.bicep               # Azure AI Search (S1 + Semantic Ranker)
+│       ├── storage.bicep              # Blob Storage + RBAC (no key auth)
+│       ├── vision.bicep               # Azure AI Vision + RBAC
+│       └── acr-access.bicep           # ACR Pull role for Managed Identity
 ├── start_backend.bat                  # Quick-start: backend
 ├── start_frontend.bat                 # Quick-start: frontend
 ├── deploy.ps1                         # Docker local / Azure Container Apps
+├── run_azd_up.bat                     # Quick-start: azd up with tenant login
 ├── Dockerfile                         # Multi-stage (frontend build + backend)
 └── README.md
 ```
@@ -350,14 +361,16 @@ visual_ai_search/
 | Azure OpenAI | — | `text-embedding-3-large` + `gpt-4.1` deployments |
 | Azure Blob Storage | — | Image and thumbnail storage |
 
-**RBAC roles** (on your Azure AD user):
+**RBAC roles** (on your Azure AD user or Managed Identity):
 
 | Role | Resource |
 |------|----------|
 | **Cognitive Services OpenAI User** | Azure OpenAI |
 | **Cognitive Services User** | Azure AI Vision |
+| **Storage Blob Data Contributor** | Azure Blob Storage |
 
-> The deploy script (`deploy.ps1`) can assign these roles automatically.
+> When deploying with `azd up`, these roles are assigned automatically via Bicep.
+> The `deploy.ps1` script can also assign OpenAI and Vision roles.
 
 ### 2. Enable Semantic Ranker
 
@@ -388,8 +401,8 @@ AZURE_OPENAI_ENDPOINT=https://<openai-name>.openai.azure.com
 AZURE_OPENAI_EMBEDDING_DEPLOYMENT=text-embedding-3-large
 AZURE_OPENAI_CHAT_DEPLOYMENT=gpt-4.1
 
-# Azure Blob Storage
-AZURE_STORAGE_CONNECTION_STRING=DefaultEndpointsProtocol=https;AccountName=...
+# Azure Blob Storage — uses DefaultAzureCredential (Entra ID), no keys needed
+AZURE_STORAGE_ACCOUNT_NAME=<storage-account-name>
 
 # Search strategy shown in frontend: "all" (show strategy selector), "vision", or "openai"
 SEARCH_STRATEGY=all
@@ -421,10 +434,42 @@ Open **http://localhost:5173**
 
 ### 5. Deploy
 
+#### Option A — Azure Developer CLI (`azd`) — Recommended
+
+Deploys **all Azure resources** (AI Search, OpenAI, AI Vision, Blob Storage, Container Registry, Container App) automatically via Bicep, then builds and pushes the Docker image:
+
+```powershell
+# One-time: log in to your tenant
+azd auth login --tenant-id <your-tenant-id>
+az login --tenant <your-tenant-id>
+
+# Deploy everything
+azd up
+```
+
+`azd up` runs three steps:
+1. **Package** — builds the Docker image locally
+2. **Provision** — creates/updates all Azure resources via Bicep (`infra/main.bicep`)
+3. **Deploy** — pushes the image to ACR and updates the Container App revision
+
+> **Tip:** Use `azd up --no-prompt` to skip confirmation prompts (useful for CI/CD or re-deploys).
+>
+> To update **only infrastructure** (no image rebuild): `azd provision`
+>
+> To update **only the app** (no infra changes): `azd deploy`
+
+The Bicep templates configure:
+- **Managed Identity** (Entra ID) for all services — no API keys for OpenAI, Vision, or Storage
+- **Startup probe** with 300s tolerance to prevent ARM stream timeouts
+- **Storage Blob Data Contributor** role for the Container App’s managed identity
+- **Semantic Ranker** enabled on Azure AI Search (Standard S1)
+
+#### Option B — Manual deploy script
+
 ```powershell
 .\deploy.ps1
-# Option 1 → Docker local
-# Option 2 → Azure Container Apps
+# Option 1 → Docker local (uses .env for credentials)
+# Option 2 → Azure Container Apps (interactive step-by-step)
 ```
 
 ---
@@ -531,7 +576,7 @@ All services are **eagerly initialized at startup** with full warm-up:
 | Azure OpenAI (embeddings) | Credential + token acquisition |
 | Azure OpenAI (GPT-4.1) | Credential + token acquisition |
 | Azure AI Search | Client creation + index schema validation |
-| Azure Blob Storage | Client creation + SAS token cache |
+| Azure Blob Storage | Client creation + User Delegation Key warm-up (Managed Identity) |
 
 This eliminates cold-start latency on the first request.
 

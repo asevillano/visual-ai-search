@@ -3,27 +3,66 @@
 Containers are PRIVATE.  Plain URLs (without SAS) are stored in the search
 index so they never expire.  Fresh SAS tokens are generated on-the-fly by
 ``refresh_sas_url()`` every time URLs are served to the frontend.
+
+Auth: Managed Identity (DefaultAzureCredential) — no account keys required.
+SAS tokens are created via **User Delegation Keys** (Entra ID).
 """
 
 import logging
 from datetime import datetime, timedelta, timezone
 from urllib.parse import urlparse
-from azure.storage.blob import BlobServiceClient, generate_blob_sas, BlobSasPermissions, ContentSettings
+from azure.identity import DefaultAzureCredential
+from azure.storage.blob import (
+    BlobServiceClient,
+    generate_blob_sas,
+    BlobSasPermissions,
+    ContentSettings,
+    UserDelegationKey,
+)
 from app.config import get_settings
 
 logger = logging.getLogger("app.blob_storage")
 
 _client: BlobServiceClient | None = None
+_credential: DefaultAzureCredential | None = None
+_user_delegation_key: UserDelegationKey | None = None
+_udk_expiry: datetime | None = None
+
+
+def _get_user_delegation_key() -> UserDelegationKey:
+    """Return a cached User Delegation Key, refreshing if close to expiry."""
+    global _user_delegation_key, _udk_expiry
+    now = datetime.now(timezone.utc)
+    # Refresh when missing or within 1 hour of expiry
+    if _user_delegation_key is None or _udk_expiry is None or now >= _udk_expiry - timedelta(hours=1):
+        start = now - timedelta(minutes=5)
+        expiry = now + timedelta(hours=24)
+        logger.info("Requesting new User Delegation Key (valid for 24 h)")
+        _user_delegation_key = _client.get_user_delegation_key(start, expiry)
+        _udk_expiry = expiry
+    return _user_delegation_key
 
 
 def init() -> None:
     """Eagerly create BlobServiceClient and ensure containers exist."""
-    global _client
+    global _client, _credential
     settings = get_settings()
-    conn = settings.azure_storage_connection_string
-    acct = conn.split("AccountName=")[1].split(";")[0] if "AccountName=" in conn else "?"
-    logger.info("Blob init — account=%s", acct)
-    _client = BlobServiceClient.from_connection_string(conn)
+
+    # Prefer account name (Managed Identity), fall back to connection string (local dev)
+    if settings.azure_storage_account_name:
+        account_name = settings.azure_storage_account_name
+        logger.info("Blob init — account=%s (Managed Identity)", account_name)
+        _credential = DefaultAzureCredential()
+        account_url = f"https://{account_name}.blob.core.windows.net"
+        _client = BlobServiceClient(account_url, credential=_credential)
+    elif settings.azure_storage_connection_string:
+        conn = settings.azure_storage_connection_string
+        acct = conn.split("AccountName=")[1].split(";")[0] if "AccountName=" in conn else "?"
+        logger.info("Blob init — account=%s (connection string)", acct)
+        _client = BlobServiceClient.from_connection_string(conn)
+    else:
+        raise ValueError("Set AZURE_STORAGE_ACCOUNT_NAME or AZURE_STORAGE_CONNECTION_STRING")
+
     for name in (settings.azure_storage_container_originals, settings.azure_storage_container_thumbnails):
         container = _client.get_container_client(name)
         if not container.exists():
@@ -31,32 +70,56 @@ def init() -> None:
             container.create_container()
         else:
             logger.info("Container '%s' already exists", name)
+
+    # Pre-warm User Delegation Key when using Managed Identity
+    if _credential is not None:
+        _get_user_delegation_key()
+
     logger.info("Blob init OK")
 
 
 def close() -> None:
     """Close the BlobServiceClient."""
-    global _client
+    global _client, _credential, _user_delegation_key, _udk_expiry
     if _client:
         _client.close()
         _client = None
+    _credential = None
+    _user_delegation_key = None
+    _udk_expiry = None
     logger.info("Blob client closed")
 
 
 def get_sas_url(container_name: str, blob_name: str, expiry_hours: int = 24) -> str:
-    """Generate a SAS URL for a blob (containers are private)."""
-    settings = get_settings()
-    account_name = _client.account_name
-    account_key = _client.credential.account_key
+    """Generate a SAS URL for a blob (containers are private).
 
-    sas_token = generate_blob_sas(
-        account_name=account_name,
-        container_name=container_name,
-        blob_name=blob_name,
-        account_key=account_key,
-        permission=BlobSasPermissions(read=True),
-        expiry=datetime.now(timezone.utc) + timedelta(hours=expiry_hours),
-    )
+    Uses User Delegation SAS (Entra ID) when Managed Identity is configured,
+    falls back to account-key SAS for local dev with connection string.
+    """
+    account_name = _client.account_name
+
+    if _credential is not None:
+        # User Delegation SAS — no account key needed
+        udk = _get_user_delegation_key()
+        sas_token = generate_blob_sas(
+            account_name=account_name,
+            container_name=container_name,
+            blob_name=blob_name,
+            user_delegation_key=udk,
+            permission=BlobSasPermissions(read=True),
+            expiry=datetime.now(timezone.utc) + timedelta(hours=expiry_hours),
+        )
+    else:
+        # Account-key SAS (local dev with connection string)
+        account_key = _client.credential.account_key
+        sas_token = generate_blob_sas(
+            account_name=account_name,
+            container_name=container_name,
+            blob_name=blob_name,
+            account_key=account_key,
+            permission=BlobSasPermissions(read=True),
+            expiry=datetime.now(timezone.utc) + timedelta(hours=expiry_hours),
+        )
     return f"https://{account_name}.blob.core.windows.net/{container_name}/{blob_name}?{sas_token}"
 
 

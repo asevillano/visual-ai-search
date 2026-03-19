@@ -12,7 +12,7 @@ import json
 import logging
 import time
 from openai import AsyncAzureOpenAI
-from azure.identity import AzureCliCredential, get_bearer_token_provider
+from azure.identity import DefaultAzureCredential, get_bearer_token_provider
 from app.config import get_settings
 
 logger = logging.getLogger("app.gpt_analysis")
@@ -68,7 +68,7 @@ Return ONLY the JSON object, nothing else.
 # ---------------------------------------------------------------------------
 
 _client: AsyncAzureOpenAI | None = None
-_credential: AzureCliCredential | None = None
+_credential: DefaultAzureCredential | None = None
 _deployment: str = ""
 
 
@@ -83,7 +83,7 @@ async def init() -> None:
     _deployment = settings.azure_openai_chat_deployment
     logger.info("GPT Analysis init — endpoint=%s, deployment=%s",
                 settings.azure_openai_endpoint, _deployment)
-    _credential = AzureCliCredential(tenant_id=settings.azure_tenant_id, process_timeout=30)
+    _credential = DefaultAzureCredential()
     token_provider = get_bearer_token_provider(
         _credential, "https://cognitiveservices.azure.com/.default"
     )
